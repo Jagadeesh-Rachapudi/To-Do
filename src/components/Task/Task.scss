@@ -1,0 +1,55 @@
+.task {
+  min-width: 25rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  min-height: 5rem;
+  margin: 5px;
+  .completed {
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgb(77, 76, 76);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .completed:hover {
+    color: greenyellow;
+    background-color: greenyellow;
+    border-radius: 50%;
+    border: 3px solid greenyellow;
+  }
+
+  .default-star {
+    color: rgb(77, 76, 76);
+    height: 23px;
+    width: 23px;
+  }
+  .hover-star {
+    color: greenyellow;
+    height: 23px;
+    width: 23px;
+  }
+  .reminder {
+    margin: auto;
+  }
+  .defualt-reminder-icon {
+    color: rgb(77, 76, 76);
+    width: 17px;
+    height: 17px;
+  }
+  .hover-reminder-icon {
+    color: greenyellow;
+    width: 17px;
+    height: 17px;
+  }
+  .content {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .taskTitle {
+    margin-bottom: 5px;
+  }
+}
