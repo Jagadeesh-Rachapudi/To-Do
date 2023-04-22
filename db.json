@@ -3,26 +3,8 @@
     {
       "id": 1,
       "taskTitle": "Harry Potter",
-      "dueDate": "06/04/2023",
-      "dueTime": "19:00",
-      "description": "",
-      "completed": false,
-      "important": false
-    },
-    {
-      "id": 2,
-      "taskTitle": "Harry Potter",
-      "dueDate": "06/04/2023",
-      "dueTime": "20:00",
-      "description": "",
-      "completed": false,
-      "important": false
-    },
-    {
-      "id": 3,
-      "taskTitle": "Harry Potter",
-      "dueDate": "06/04/2023",
-      "dueTime": "9:00",
+      "dueDate": "22/04/2023",
+      "dueTime": "09:43",
       "description": "",
       "completed": false,
       "important": false

@@ -7,7 +7,7 @@ function Provider({ children }) {
   const [data, setTasks] = useState([]);
 
   const fetchTasks = async () => {
-    console.log("hello");
+    // console.log("hello");
     const response = await axios.get("http://localhost:3001/data");
     setTasks(response.data);
   };

@@ -1,5 +1,6 @@
 import { VscCircleLargeFilled } from "react-icons/vsc";
 import React, { useState } from "react";
+import { useMemo } from "react";
 import {
   AiOutlineStar,
   AiFillStar,
@@ -9,49 +10,21 @@ import {
 import "./Task.scss";
 import Card from "react-bootstrap/Card";
 import Notification from "../Notification/Notification";
-
-const Task = ({id,taskTitle,dueDate,dueTime,description,completed,important}) => {
+import formatDate from "../../utils/DateFormater";
+import DateTimeMatcher from "../../utils/DateTimeMatcher";
+const Task = ({
+  id,
+  taskTitle,
+  dueDate,
+  dueTime,
+  description,
+  completed,
+  important,
+}) => {
   const [hoveredStar, setHoveredStar] = useState(false);
-  const [hoveredReminderIcon, setHoveredReminderIcon] = useState(false);
-
-  const currentDate = new Date();
-  const showNotification = details.some(
-    (detail) =>
-      detail.dueDate &&
-      Math.floor(Math.abs(detail.dueDate - currentDate) / 1000 / 60) <= 1
-  );
-
-  // const renderDetails = details.map((detail) => (
-  //   <div key={detail.label} className="flex mx-auto my-auto ">
-  //     <div className="me-2 ">
-  //       {detail.dueDate ? (
-  //         <p className="my-auto">
-  //           {detail.dueDate.toLocaleDateString("en-US", {
-  //             month: "short",
-  //             day: "numeric",
-  //             year: "numeric",
-  //           })}
-  //         </p>
-  //       ) : null}
-  //     </div>
-  //     <div className="reminder">
-  //       {detail.reminder && !hoveredReminderIcon ? (
-  //         <AiOutlineBell
-  //           className="default-reminder-icon cursor-pointer"
-  //           onMouseEnter={() => setHoveredReminderIcon(true)}
-  //           onMouseLeave={() => setHoveredReminderIcon(false)}
-  //         />
-  //       ) : (
-  //         <AiTwotoneBell
-  //           className="hover-reminder-icon cursor-pointer"
-  //           onMouseEnter={() => setHoveredReminderIcon(true)}
-  //           onMouseLeave={() => setHoveredReminderIcon(false)}
-  //         />
-  //       )}
-  //     </div>
-  //   </div>
-  // ));
-
+  const [formattedDueDate, setFromatedDueDate] = useState(formatDate(dueDate));
+  
+  const showNotification = DateTimeMatcher({ dueDate, dueTime });
   return (
     <div>
       <Card className="task ">
@@ -60,7 +33,11 @@ const Task = ({id,taskTitle,dueDate,dueTime,description,completed,important}) =>
         </div>
         <div className="content">
           <div className="taskTitle">{taskTitle}</div>
-          <div className="details">{renderDetails}</div>
+          <div className="d-flex justify-content-between align-items-center">
+            <div>{formattedDueDate}</div>
+            <div className="mx-3 desc">{description && description}</div>
+            <div>{dueTime}</div>
+          </div>
         </div>
         <div className="my-auto">
           {!hoveredStar ? (

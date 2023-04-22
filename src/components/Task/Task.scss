@@ -44,12 +44,16 @@
     height: 17px;
   }
   .content {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: auto;
     margin-bottom: auto;
+    flex-grow: 1;
   }
   .taskTitle {
     margin-bottom: 5px;
+  }
+  .desc {
+    max-width: 15rem;
   }
 }

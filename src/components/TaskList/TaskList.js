@@ -64,7 +64,6 @@ function TaskList() {
       completed,
       important,
     }) => {
-      console.log(taskTitle);
       return (
         <Task
           id={id}
@@ -74,7 +73,6 @@ function TaskList() {
           description={description}
           completed={completed}
           important={important}
-          details={details}
         />
       );
     }
