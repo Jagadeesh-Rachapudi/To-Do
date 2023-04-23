@@ -4,12 +4,11 @@ import axios from "axios";
 const TaskContext = createContext();
 
 function Provider({ children }) {
-  const [data, setTasks] = useState([]);
+  const [data, setData] = useState([]);
 
   const fetchTasks = async () => {
-    // console.log("hello");
     const response = await axios.get("http://localhost:3001/data");
-    setTasks(response.data);
+    setData(response.data);
   };
 
   //   const editTaskbyId = async (id, newTitle) => {
@@ -38,18 +37,39 @@ function Provider({ children }) {
   //     setBooks(updatedBooks);
   //   };
 
-  // const createBook = async (title) => {
-  //     const response = await axios.post("http://localhost:3001/books", {
-  //       title,
-  //     });
+  const createdTaskdata = {
+    taskTitle: "Jagadeesh",
+    dueDate: "25/04/2023",
+    dueTime: "17:00",
+    description: "Jagxy",
+    completed: false,
+    important: true,
+  };
 
-  //     const updatedBooks = [...books, response.data];
-  //     setBooks(updatedBooks);
-  //   };
+  const createTask = async ({
+    taskTitle,
+    dueDate,
+    dueTime,
+    description,
+    important,
+  }) => {
+    const response = await axios.post("http://localhost:3001/data", {
+      taskTitle,
+      dueDate,
+      dueTime,
+      description,
+      completed: true,
+      important,
+    });
+
+    const updatedData = [...data, response.data];
+    setData(updatedData);
+  };
 
   const valueToShare = {
     data,
     fetchTasks,
+    createTask,
   };
 
   return (

@@ -23,7 +23,7 @@ const Task = ({
 }) => {
   const [hoveredStar, setHoveredStar] = useState(false);
   const [formattedDueDate, setFromatedDueDate] = useState(formatDate(dueDate));
-  
+
   const showNotification = DateTimeMatcher({ dueDate, dueTime });
   return (
     <div>

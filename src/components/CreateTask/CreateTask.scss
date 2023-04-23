@@ -29,3 +29,33 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0069d9;
 }
+.create-button {
+  height: 85px;
+  width: 85px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 16px;
+  background-color: transparent;
+  // border: 2px solid black;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 1px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+.create-button:hover {
+  transform: rotate(45deg);
+}
+
+.create-button.clicked {
+  transform: rotate(45deg);
+}
+.time-banner {
+  background-color: white;
+  width: 20rem;
+  height: 5rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+  border: 0.1px solid black;
+}
