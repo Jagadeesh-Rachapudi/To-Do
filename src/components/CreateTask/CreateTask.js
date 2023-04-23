@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Datetime from "react-datetime";
@@ -10,7 +10,7 @@ import useTasksContext from "../../hooks/use-task-context";
 import TimePicker from "./TimePicker.js";
 import { convertTo24HourFormat } from "../../utils/commonFunctions";
 
-function CreateTask() {
+function CreateTask({ showModel = false }) {
   const [show, setShow] = useState(false);
   const [important, setImportant] = useState(false);
   const [taskTitle, setTaskTitle] = useState("");
@@ -25,6 +25,10 @@ function CreateTask() {
   const [isClicked, setIsClicked] = useState(false);
   const { createTask } = useTasksContext();
   const [timeEntered, setTimeEntered] = useState("");
+
+  if (showModel) {
+    setShow(true);
+  }
 
   const handleClose = () => {
     setIsClicked(!isClicked);

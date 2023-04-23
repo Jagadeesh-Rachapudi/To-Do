@@ -4,7 +4,7 @@ import "./TaskList.scss";
 import useTasksContext from "../../hooks/use-task-context";
 
 function TaskList() {
-  const { data } = useTasksContext();
+  const { data, editTaskbyId } = useTasksContext();
 
   // const data2 = [
   //   {
@@ -65,15 +65,17 @@ function TaskList() {
       important,
     }) => {
       return (
-        <Task
-          id={id}
-          taskTitle={taskTitle}
-          dueDate={dueDate}
-          dueTime={dueTime}
-          description={description}
-          completed={completed}
-          important={important}
-        />
+        <div key={id}>
+          <Task
+            id={id}
+            taskTitle={taskTitle}
+            dueDate={dueDate}
+            dueTime={dueTime}
+            description={description}
+            completed={completed}
+            important={important}
+          />
+        </div>
       );
     }
   );

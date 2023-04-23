@@ -11,41 +11,6 @@ function Provider({ children }) {
     setData(response.data);
   };
 
-  //   const editTaskbyId = async (id, newTitle) => {
-  //     const response = await axios.put(`http://localhost:3001/books/${id}`, {
-  //       title: newTitle,
-  //     });
-
-  //     const updatedBooks = books.map((book) => {
-  //       if (book.id === id) {
-  //         return { ...book, ...response.data };
-  //       }
-
-  //       return book;
-  //     });
-
-  //     setBooks(updatedBooks);
-  //   };
-
-  //   const deleteBookById = async (id) => {
-  //     await axios.delete(`http://localhost:3001/books/${id}`);
-
-  //     const updatedBooks = books.filter((book) => {
-  //       return book.id !== id;
-  //     });
-
-  //     setBooks(updatedBooks);
-  //   };
-
-  const createdTaskdata = {
-    taskTitle: "Jagadeesh",
-    dueDate: "25/04/2023",
-    dueTime: "17:00",
-    description: "Jagxy",
-    completed: false,
-    important: true,
-  };
-
   const createTask = async ({
     taskTitle,
     dueDate,
@@ -66,10 +31,39 @@ function Provider({ children }) {
     setData(updatedData);
   };
 
+  const editTaskbyId = async (id, updatedTask) => {
+    const response = await axios.put(
+      `http://localhost:3001/data/${id}`,
+      updatedTask
+    );
+
+    const updatedData = data.map((task) => {
+      if (task.id === id) {
+        return { ...task, ...response.data };
+      }
+
+      return task;
+    });
+
+    setData(updatedData);
+  };
+
+  const deleteTaskById = async (id) => {
+    await axios.delete(`http://localhost:3001/data/${id}`);
+
+    const updatedData = data.filter((task) => {
+      return task.id !== id;
+    });
+
+    setData(updatedData);
+  };
+
   const valueToShare = {
     data,
     fetchTasks,
     createTask,
+    editTaskbyId,
+    deleteTaskById,
   };
 
   return (

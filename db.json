@@ -1,157 +1,112 @@
 {
   "data": [
     {
-      "id": 1,
       "taskTitle": "Finish report for work project",
       "dueDate": "25/04/2023",
       "dueTime": "17:00",
       "description": "Need to summarize findings and present recommendations.",
-      "completed": false,
-      "important": true
+      "important": false,
+      "completed": true,
+      "id": 1
     },
     {
-      "id": 2,
       "taskTitle": "Buy groceries",
       "dueDate": "26/04/2023",
       "dueTime": "13:00",
       "description": "Need to get milk, eggs, bread, and fruit.",
-      "completed": false,
-      "important": false
-    },
-    {
-      "id": 3,
-      "taskTitle": "Pick up dry cleaning",
-      "dueDate": "24/04/2023",
-      "dueTime": "18:30",
-      "description": "",
       "completed": true,
-      "important": false
+      "important": false,
+      "id": 2
     },
     {
-      "id": 4,
-      "taskTitle": "Call mom",
-      "dueDate": "23/04/2023",
-      "dueTime": "10:00",
-      "description": "Need to check in and see how she's doing.",
-      "completed": false,
-      "important": true
+      "taskTitle": "Jagadeesh tenison ",
+      "dueDate": "25/04/2023",
+      "dueTime": "17:00",
+      "description": "Need to summarize findings and present recommendations.",
+      "important": false,
+      "completed": true,
+      "id": 3
     },
     {
-      "id": 5,
-      "taskTitle": "Finish reading book",
-      "dueDate": "27/04/2023",
-      "dueTime": "20:00",
-      "description": "Only have 50 pages left.",
-      "completed": false,
-      "important": false
-    },
-    {
-      "id": 6,
-      "taskTitle": "Schedule doctor appointment",
-      "dueDate": "29/04/2023",
-      "dueTime": "11:00",
-      "description": "Need to get a check-up and refill prescription.",
-      "completed": false,
-      "important": true
-    },
-    {
-      "id": 7,
-      "taskTitle": "Clean apartment",
-      "dueDate": "28/04/2023",
-      "dueTime": "14:00",
-      "description": "Vacuum, dust, and clean bathroom.",
-      "completed": false,
-      "important": false
-    },
-    {
-      "id": 8,
-      "taskTitle": "Plan weekend getaway",
-      "dueDate": "30/04/2023",
-      "dueTime": "09:00",
-      "description": "Looking at beach destinations.",
-      "completed": false,
-      "important": true
-    },
-    {
-      "id": 9,
       "taskTitle": "Go for a run",
       "dueDate": "23/04/2023",
       "dueTime": "07:00",
       "description": "Want to get some exercise before work.",
+      "important": false,
       "completed": true,
-      "important": false
+      "id": 9
     },
     {
-      "id": 10,
       "taskTitle": "Watch new movie",
       "dueDate": "25/04/2023",
       "dueTime": "20:30",
       "description": "Have been wanting to see this for a while.",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 10
     },
     {
-      "id": 11,
       "taskTitle": "Take dog to the vet",
       "dueDate": "27/04/2023",
       "dueTime": "15:30",
       "description": "Need to get updated shots and check for any issues.",
+      "important": false,
       "completed": false,
-      "important": true
+      "id": 11
     },
     {
-      "id": 12,
       "taskTitle": "Pay rent",
       "dueDate": "01/05/2023",
       "dueTime": "12:00",
       "description": "",
+      "important": false,
       "completed": false,
-      "important": true
+      "id": 12
     },
     {
-      "id": 13,
       "taskTitle": "Organize closet",
       "dueDate": "30/04/2023",
       "dueTime": "16:00",
       "description": "Sort clothes and donate items I don't wear.",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 13
     },
     {
-      "id": 14,
       "taskTitle": "Call insurance company",
       "dueDate": "28/04/2023",
       "dueTime": "10:00",
       "description": "Need to update policy and ask about coverage.",
+      "important": false,
       "completed": false,
-      "important": true
+      "id": 14
     },
     {
-      "id": 15,
       "taskTitle": "Attend meeting",
       "dueDate": "02/05/2023",
       "dueTime": "11:00",
       "description": "Discuss project progress with team.",
+      "important": false,
       "completed": false,
-      "important": true
+      "id": 15
     },
     {
-      "id": 16,
       "taskTitle": "Plan birthday party",
       "dueDate": "03/05/2023",
       "dueTime": "18:00",
       "description": "Organize guest list and decorations.",
       "completed": false,
-      "important": false
+      "important": true,
+      "id": 16
     },
     {
-      "id": 17,
       "taskTitle": "Buy new shoes",
       "dueDate": "29/04/2023",
       "dueTime": "15:00",
       "description": "Need comfortable pair for work.",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 17
     },
     {
       "id": 18,
@@ -163,40 +118,40 @@
       "important": false
     },
     {
-      "id": 19,
       "taskTitle": "Do laundry",
       "dueDate": "28/04/2023",
       "dueTime": "12:00",
       "description": "",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 19
     },
     {
-      "id": 20,
       "taskTitle": "Practice guitar",
       "dueDate": "02/05/2023",
       "dueTime": "20:00",
       "description": "Work on new song I've been learning.",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 20
     },
     {
-      "id": 21,
       "taskTitle": "Buy birthday gift",
       "dueDate": "03/05/2023",
       "dueTime": "14:00",
       "description": "Friend's birthday coming up.",
+      "important": false,
       "completed": false,
-      "important": true
+      "id": 21
     },
     {
-      "id": 23,
       "taskTitle": "Prepare for job interview",
       "dueDate": "05/05/2023",
       "dueTime": "11:00",
       "description": "Research company and practice responses to common questions.",
+      "important": false,
       "completed": false,
-      "important": true
+      "id": 23
     },
     {
       "id": 24,
@@ -208,13 +163,13 @@
       "important": false
     },
     {
-      "id": 25,
       "taskTitle": "Schedule oil change",
       "dueDate": "02/05/2023",
       "dueTime": "09:00",
       "description": "Car is due for regular maintenance.",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 25
     },
     {
       "id": 26,
@@ -226,13 +181,13 @@
       "important": false
     },
     {
-      "id": 27,
       "taskTitle": "Go for a run",
       "dueDate": "28/04/2023",
       "dueTime": "07:00",
       "description": "Need to get some exercise.",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 27
     },
     {
       "id": 28,
@@ -253,13 +208,13 @@
       "important": false
     },
     {
-      "id": 30,
       "taskTitle": "Clean bathroom",
       "dueDate": "28/04/2023",
       "dueTime": "14:00",
       "description": "Scrub sink, toilet, and shower.",
+      "important": false,
       "completed": false,
-      "important": false
+      "id": 30
     },
     {
       "id": 31,
@@ -268,7 +223,7 @@
       "dueTime": "13:00",
       "description": "Need to get a physical and check on a lingering cough.",
       "completed": false,
-      "important": true
+      "important": false
     },
     {
       "id": 32,
@@ -277,15 +232,15 @@
       "dueTime": "11:00",
       "description": "Brush up on skills related to my job.",
       "completed": false,
-      "important": true
+      "important": false
     },
     {
       "taskTitle": "max",
       "dueDate": "21/04/2023",
       "dueTime": "23:58",
       "description": "max",
-      "completed": true,
-      "important": true,
+      "important": false,
+      "completed": false,
       "id": 33
     },
     {
@@ -293,7 +248,7 @@
       "dueDate": "16/04/2023",
       "dueTime": "11:00",
       "description": "aaaaaaaaaa",
-      "completed": true,
+      "completed": false,
       "important": false,
       "id": 34
     },
@@ -302,8 +257,8 @@
       "dueDate": "10/04/2023",
       "dueTime": "17:00",
       "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "completed": true,
-      "important": true,
+      "important": false,
+      "completed": false,
       "id": 35
     },
     {
@@ -311,8 +266,8 @@
       "dueDate": "06/04/2023",
       "dueTime": "12:00",
       "description": "",
-      "completed": true,
-      "important": true,
+      "important": false,
+      "completed": false,
       "id": 36
     },
     {
@@ -320,8 +275,8 @@
       "dueDate": "10/04/2023",
       "dueTime": "12:45 AM",
       "description": "",
-      "completed": true,
-      "important": true,
+      "completed": false,
+      "important": false,
       "id": 37
     },
     {
@@ -329,16 +284,16 @@
       "dueDate": "02/05/2023",
       "dueTime": "1:45 PM",
       "description": "",
-      "completed": true,
-      "important": true,
+      "completed": false,
+      "important": false,
       "id": 38
     },
     {
       "taskTitle": "vomit it ",
       "dueDate": "20/04/2023",
       "description": "",
-      "completed": true,
-      "important": true,
+      "completed": false,
+      "important": false,
       "id": 39
     },
     {
@@ -346,8 +301,8 @@
       "dueDate": "11/04/2023",
       "dueTime": "13:00",
       "description": "",
-      "completed": true,
-      "important": true,
+      "completed": false,
+      "important": false,
       "id": 40
     }
   ]
