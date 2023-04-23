@@ -4,14 +4,17 @@ import Modal from "react-bootstrap/Modal";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import moment from "moment";
-import "./CreateTask.scss";
+import "../CreateTask/CreateTask.scss";
 import { CgMathPlus } from "react-icons/cg";
 import useTasksContext from "../../hooks/use-task-context";
-import TimePicker from "./TimePicker.js";
-import { convertTo24HourFormat } from "../../utils/commonFunctions";
+import TimePicker from "../CreateTask/TimePicker.js";
+import {
+  convertTo24HourFormat,
+  convertTo12HourFormat,
+} from "../../utils/commonFunctions";
 
-function CreateTask({ showModel = false }) {
-  const [show, setShow] = useState(false);
+function EditTask({ showModel = false, taskID }) {
+  const [show, setShow] = useState(showModel);
   const [important, setImportant] = useState(false);
   const [taskTitle, setTaskTitle] = useState("");
   const [dueDate, setDueDate] = useState("");
@@ -23,19 +26,8 @@ function CreateTask({ showModel = false }) {
     dueTime: "",
   });
   const [isClicked, setIsClicked] = useState(false);
-  const { createTask } = useTasksContext();
+  const { getTaskById, editTaskbyId } = useTasksContext();
   const [timeEntered, setTimeEntered] = useState("");
-
-  const handleClose = () => {
-    setIsClicked(!isClicked);
-    setShow(false);
-    setTaskTitle("");
-    setDueDate("");
-    setDueTime("");
-    setDescription("");
-    setErrors({});
-    setImportant(false);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,7 +46,7 @@ function CreateTask({ showModel = false }) {
     } else {
       const regex = /^(1[0-2]|0?[1-9]):([0-5][0-9])\s?(am|pm)?$/i;
       if (!dueTime.match(regex)) {
-        errors.dueTime = "Please enter a valid time in HH:MM:AM/PM format.";
+        errors.dueTime = "Please enter a valid time in 12:45 AM format.";
       } else {
         const [timeStr, meridiem] = dueTime.split(/\s*(am|pm)?\s*/i);
         const [hoursStr, minutesStr] = dueTime.split(":");
@@ -68,25 +60,38 @@ function CreateTask({ showModel = false }) {
           minutes < 0 ||
           minutes > 59
         ) {
-          errors.dueTime = "Please enter a valid time in HH:MM:AM/PM format.";
+          errors.dueTime = "Please enter a valid time in 12:45 AM format.";
         }
       }
     }
 
     const dueTime24hr = convertTo24HourFormat({ time: dueTime });
 
+    console.log(errors.dueTime);
+
     if (Object.keys(errors).length === 0) {
-      createTask({
-        taskTitle,
-        dueDate,
+      editTaskbyId(taskID, {
+        taskTitle: taskTitle,
+        dueDate: dueDate,
         dueTime: dueTime24hr,
-        description,
-        important,
+        description: description,
+        important: important,
       });
       handleClose();
     } else {
       setErrors(errors);
     }
+  };
+
+  const handleClose = () => {
+    setIsClicked(!isClicked);
+    setShow(false);
+    setTaskTitle("");
+    setDueDate("");
+    setDueTime("");
+    setDescription("");
+    setErrors({});
+    setImportant(false);
   };
 
   const handleInputChange = (event) => {
@@ -119,33 +124,27 @@ function CreateTask({ showModel = false }) {
   const footer = (
     <Modal.Footer>
       <Button variant="primary" type="submit" onClick={handleSubmit}>
-        Create Task
+        Update Task
       </Button>
     </Modal.Footer>
   );
-
-  const handleToggle = () => {
-    setIsClicked(!isClicked);
-    setShow(!show);
-  };
 
   const handleImportantChange = (event) => {
     setImportant(event.target.value);
     setImportant(!important);
   };
 
+  useEffect(() => {
+    const task = getTaskById(taskID);
+    setTaskTitle(task.taskTitle);
+    setDueDate(task.dueDate);
+    setDueTime(convertTo12HourFormat({ timeString: task.dueTime }));
+    setDescription(task.description);
+    setImportant(task.important);
+  }, []);
+
   return (
     <>
-      <button
-        className={`create-button ${isClicked ? "clicked" : ""}`}
-        onClick={handleToggle}
-      >
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <CgMathPlus className="text-black text-5xl" />
-          </div>
-        </div>
-      </button>
       <Modal
         show={show}
         onHide={handleClose}
@@ -153,10 +152,15 @@ function CreateTask({ showModel = false }) {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Add New Task</Modal.Title>
+          <Modal.Title>Update Task</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              console.log("Sun");
+            }}
+          >
             <div className="mb-3">
               <label htmlFor="task-title" className="form-label">
                 Task Title:
@@ -168,6 +172,7 @@ function CreateTask({ showModel = false }) {
                 name="taskTitle"
                 onChange={handleInputChange}
                 autocomplete="off"
+                value={taskTitle}
               />
               {errors.taskTitle && !taskTitle && (
                 <p className="text-danger">{errors.taskTitle}</p>
@@ -193,45 +198,21 @@ function CreateTask({ showModel = false }) {
                 <p className="text-danger">{errors.dueDate}</p>
               )}
             </div>
-            {/* <div className="mb-3">
-              <label htmlFor="due-time" className="form-label">
-                Due Time:
-              </label>
-              <Datetime
-                inputProps={{
-                  className: "form-control",
-                  id: "due-time",
-                  name: "dueTime",
-                }}
-                dateFormat={false}
-                timeFormat="hh:mm A"
-                value={dueTime}
-                onChange={handleTimeChange}
-              />
-              
-            </div> */}
+
             <div className="mb-3">
               <label htmlFor="due-date" className="form-label">
                 Due Time in 12:45 AM format:
               </label>
-              {/* <DatePicker
-                id="due-date"
-                name="dueDate"
-                value={dueTime}
-                onChange={handleTimeChange}
-                showTimeSelect
-                timeFormat="HH:mm"
-                dateFormat="MM/DD/YYYY HH:mm"
-              /> */}
+
               <TimePicker
                 className="form-control"
                 name="dueDate"
-                value={timeEntered}
+                value={timeEntered || dueTime}
                 onChange={handleTimeChange}
                 timeFormat="hh:mm A"
               />
 
-              {errors.dueTime && !dueTime && (
+              {errors.dueTime && (
                 <p className="text-danger">{errors.dueTime}</p>
               )}
             </div>
@@ -244,6 +225,7 @@ function CreateTask({ showModel = false }) {
                 id="description"
                 name="description"
                 onChange={handleInputChange}
+                value={description}
               />
             </div>
             <div class="form-check form-switch mb-3">
@@ -257,6 +239,7 @@ function CreateTask({ showModel = false }) {
                 checked={important}
                 onChange={handleImportantChange}
                 autocomplete="off"
+                value={important}
               />
             </div>
             {footer}
@@ -267,4 +250,4 @@ function CreateTask({ showModel = false }) {
   );
 }
 
-export default CreateTask;
+export default EditTask;

@@ -33,7 +33,6 @@
       "dueTime": "07:00",
       "description": "Want to get some exercise before work.",
       "important": false,
-      "completed": true,
       "id": 9
     },
     {
@@ -46,21 +45,11 @@
       "id": 10
     },
     {
-      "taskTitle": "Take dog to the vet",
-      "dueDate": "27/04/2023",
-      "dueTime": "15:30",
-      "description": "Need to get updated shots and check for any issues.",
-      "important": false,
-      "completed": false,
-      "id": 11
-    },
-    {
-      "taskTitle": "Pay rent",
+      "taskTitle": "Pay re",
       "dueDate": "01/05/2023",
       "dueTime": "12:00",
       "description": "",
       "important": false,
-      "completed": false,
       "id": 12
     },
     {
@@ -154,13 +143,12 @@
       "id": 23
     },
     {
-      "id": 24,
-      "taskTitle": "Buy groceries",
-      "dueDate": "30/04/2023",
+      "taskTitle": "jagsy",
+      "dueDate": "07/04/2023",
       "dueTime": "13:00",
-      "description": "Need food for the week.",
-      "completed": false,
-      "important": false
+      "description": "Need food ",
+      "important": true,
+      "id": 24
     },
     {
       "taskTitle": "Schedule oil change",
@@ -304,6 +292,24 @@
       "completed": false,
       "important": false,
       "id": 40
+    },
+    {
+      "taskTitle": "APPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPLLLLLLLLLLLLLLLLLLLLLE",
+      "dueDate": "13/04/2023",
+      "dueTime": "23:45",
+      "description": "APPLE",
+      "important": true,
+      "completed": false,
+      "id": 41
+    },
+    {
+      "taskTitle": "test",
+      "dueDate": "24/04/2023",
+      "dueTime": "03:50",
+      "description": "hello",
+      "completed": true,
+      "important": true,
+      "id": 42
     }
   ]
 }

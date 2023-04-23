@@ -58,12 +58,15 @@ function Provider({ children }) {
     setData(updatedData);
   };
 
+  const getTaskById = (Id) => data.find((task) => task.id === Id);
+
   const valueToShare = {
     data,
     fetchTasks,
     createTask,
     editTaskbyId,
     deleteTaskById,
+    getTaskById,
   };
 
   return (

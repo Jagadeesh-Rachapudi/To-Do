@@ -20,3 +20,13 @@ export const convertTo24HourFormat = ({ time }) => {
   console.log(`${hoursFormatted}:${minutesFormatted}`);
   return `${hoursFormatted}:${minutesFormatted}`;
 };
+
+export const convertTo12HourFormat = ({timeString}) => {
+  let [hours, minutes] = timeString.split(":");
+  const suffix = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+  hours = hours.toString().padStart(2, "0");
+  minutes = minutes.toString().padStart(2, "0");
+
+  return `${hours}:${minutes} ${suffix}`;
+};

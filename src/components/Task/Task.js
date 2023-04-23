@@ -10,7 +10,7 @@ import DateTimeMatcher from "../../utils/DateTimeMatcher";
 import useTasksContext from "../../hooks/use-task-context";
 import Confetti from "react-confetti";
 import { RxCross1 } from "react-icons/rx";
-import CreateTask from "../CreateTask/CreateTask";
+import EditTask from "../EditTask/EditTask.js";
 
 const Task = ({
   id,
@@ -82,7 +82,11 @@ const Task = ({
     setOnEdit(true);
   };
 
-  const editComponent = onEdit ? <CreateTask showModel={true} /> : null;
+  const editComponent = onEdit ? (
+    <>
+      <EditTask showModel={true} taskID={id} />
+    </>
+  ) : null;
 
   const showNotification = DateTimeMatcher({ dueDate, dueTime });
   return (
