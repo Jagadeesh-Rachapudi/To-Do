@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 import Link from "./Link";
 import "./utils.scss";
 import CreateNewList from "../components/CreateNewList/CreateNewList";
 import useListName from "../hooks/use-listName-context";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 function Topbar() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [modalShow, setModalShow] = useState(false);
   const { listNames } = useListName();
 
@@ -32,16 +38,42 @@ function Topbar() {
         boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.2)",
       }}
     >
-      <div className="flex-grow">{renderedLinks}</div>
-      <div className="flex justify-end">
+      <div className="flex-grow d-none d-lg-block ">{renderedLinks}</div>
+
+      <div className="button-box">
+        <button
+          className="btn btn-light new-list-btn d-block d-lg-none"
+          style={{
+            maxHeight: "40px",
+            paddingBottom: "40px !important",
+          }}
+          onClick={handleShow}
+        >
+          <AiOutlineMenu />
+        </button>
         <button
           type="button"
-          class="btn btn-light mb-1 new-list-btn"
+          className={`btn btn-light mb-1 new-list-btn ${
+            listNames.length <= 7 ? "" : "disabled-btn"
+          }`}
           onClick={() => setModalShow(true)}
         >
           New List
         </button>
+      </div>
+
+      {listNames.length <= 7 ? (
         <CreateNewList show={modalShow} onHide={() => setModalShow(false)} />
+      ) : null}
+      <div>
+        <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>All Lists</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <div className="menu-flex-grow">{renderedLinks}</div>
+          </Offcanvas.Body>
+        </Offcanvas>
       </div>
     </div>
   );

@@ -53,3 +53,27 @@
   color: white !important;
   transition: all 0.3s ease;
 }
+.disabled-btn {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+.disabled-btn:hover {
+  background-color: white !important;
+  color: black !important;
+}
+.button-box {
+  display: flex;
+  @media screen and (max-width: 992px) {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+.menu-flex-grow {
+  display: flex;
+  flex-direction: column;
+  .link {
+    display: block;
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+}
