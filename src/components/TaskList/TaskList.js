@@ -3,7 +3,7 @@ import Task from "../Task/Task";
 import "./TaskList.scss";
 import useTasksContext from "../../hooks/use-task-context";
 
-function TaskList() {
+function TaskList({ renderTasks }) {
   const { data, editTaskbyId } = useTasksContext();
 
   // const data2 = [
@@ -54,31 +54,31 @@ function TaskList() {
   //   },
   // ];
 
-  const renderTasks = data.map(
-    ({
-      id,
-      taskTitle,
-      dueDate,
-      dueTime,
-      description,
-      completed,
-      important,
-    }) => {
-      return (
-        <div key={id}>
-          <Task
-            id={id}
-            taskTitle={taskTitle}
-            dueDate={dueDate}
-            dueTime={dueTime}
-            description={description}
-            completed={completed}
-            important={important}
-          />
-        </div>
-      );
-    }
-  );
+  // const renderTasks = data.map(
+  //   ({
+  //     id,
+  //     taskTitle,
+  //     dueDate,
+  //     dueTime,
+  //     description,
+  //     completed,
+  //     important,
+  //   }) => {
+  //     return (
+  //       <div key={id}>
+  //         <Task
+  //           id={id}
+  //           taskTitle={taskTitle}
+  //           dueDate={dueDate}
+  //           dueTime={dueTime}
+  //           description={description}
+  //           completed={completed}
+  //           important={important}
+  //         />
+  //       </div>
+  //     );
+  //   }
+  // );
   // console.log(tasks.length);
   return <div className="taskList">{renderTasks}</div>;
 }

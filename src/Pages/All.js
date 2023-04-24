@@ -6,7 +6,6 @@ function All() {
   return (
     <div>
       <TaskList />
-      <CreateTask />
     </div>
   );
 }

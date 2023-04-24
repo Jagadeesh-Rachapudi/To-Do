@@ -9,6 +9,7 @@ import { CgMathPlus } from "react-icons/cg";
 import useTasksContext from "../../hooks/use-task-context";
 import TimePicker from "./TimePicker.js";
 import { convertTo24HourFormat } from "../../utils/commonFunctions";
+import useNavigation from "../../hooks/useNavigation";
 
 function CreateTask({ showModel = false }) {
   const [show, setShow] = useState(false);
@@ -25,6 +26,7 @@ function CreateTask({ showModel = false }) {
   const [isClicked, setIsClicked] = useState(false);
   const { createTask } = useTasksContext();
   const [timeEntered, setTimeEntered] = useState("");
+  const { currentPath } = useNavigation();
 
   const handleClose = () => {
     setIsClicked(!isClicked);
@@ -82,6 +84,7 @@ function CreateTask({ showModel = false }) {
         dueTime: dueTime24hr,
         description,
         important,
+        listName: currentPath,
       });
       handleClose();
     } else {

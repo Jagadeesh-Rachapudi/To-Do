@@ -7,7 +7,8 @@
       "dueDate": "05/01/2023",
       "dueTime": "10:00",
       "important": true,
-      "completed": false
+      "completed": false,
+      "listName": "/work"
     },
     {
       "taskTitle": "Exercise",
@@ -16,268 +17,48 @@
       "description": "Go for a run",
       "important": false,
       "completed": true,
-      "id": 4
+      "id": 4,
+      "listName": "/work"
     },
     {
-      "id": 5,
-      "taskTitle": "Pay bills",
-      "description": "Electricity, water, internet",
-      "dueDate": "05/10/2023",
-      "dueTime": "12:00",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 6,
-      "taskTitle": "Call mom",
-      "description": "",
-      "dueDate": "05/12/2023",
-      "dueTime": "16:00",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 7,
-      "taskTitle": "Read book",
-      "description": "The Catcher in the Rye",
-      "dueDate": "05/14/2023",
-      "dueTime": "20:00",
-      "important": false,
-      "completed": false
-    },
-    {
-      "taskTitle": "Meet with colleagues",
-      "dueDate": "05/17/2023",
-      "dueTime": "11:00",
-      "description": "Discuss project progress",
-      "important": true,
+      "taskTitle": "max",
+      "dueDate": "05/04/2023",
+      "dueTime": "00:45",
+      "description": "hello",
       "completed": false,
+      "important": true,
+      "listName": "/work",
+      "id": 5
+    },
+    {
+      "taskTitle": "work done",
+      "dueDate": "12/04/2023",
+      "dueTime": "00:45",
+      "description": "",
+      "completed": false,
+      "important": false,
+      "listName": "/all",
+      "id": 6
+    },
+    {
+      "taskTitle": "sundar",
+      "dueDate": "12/04/2023",
+      "dueTime": "00:45",
+      "description": "hello\n",
+      "completed": false,
+      "important": false,
+      "listName": "/sundar",
+      "id": 7
+    },
+    {
+      "taskTitle": "Jaggu bhai",
+      "dueDate": "12/04/2023",
+      "dueTime": "00:45",
+      "description": "",
+      "completed": false,
+      "important": false,
+      "listName": "/work",
       "id": 8
-    },
-    {
-      "id": 9,
-      "taskTitle": "Renew library books",
-      "description": "",
-      "dueDate": "05/19/2023",
-      "dueTime": "13:00",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 10,
-      "taskTitle": "Buy birthday gift",
-      "description": "For sister",
-      "dueDate": "05/22/2023",
-      "dueTime": "09:00",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 11,
-      "taskTitle": "Send invoices",
-      "description": "Follow up on overdue payments",
-      "dueDate": "30062023",
-      "dueTime": "1600",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 12,
-      "taskTitle": "Buy concert tickets",
-      "description": "",
-      "dueDate": "15072023",
-      "dueTime": "1200",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 13,
-      "taskTitle": "Plan weekend getaway",
-      "description": "Research destinations and book accommodations",
-      "dueDate": "21072023",
-      "dueTime": "1500",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 14,
-      "taskTitle": "Attend doctor's appointment",
-      "description": "",
-      "dueDate": "25072023",
-      "dueTime": "1000",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 15,
-      "taskTitle": "Submit report",
-      "description": "Gather and analyze data",
-      "dueDate": "29072023",
-      "dueTime": "0900",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 16,
-      "taskTitle": "Meet with client",
-      "description": "Discuss project updates",
-      "dueDate": "02082023",
-      "dueTime": "1400",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 17,
-      "taskTitle": "Buy new phone",
-      "description": "",
-      "dueDate": "06082023",
-      "dueTime": "1100",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 18,
-      "taskTitle": "Attend networking event",
-      "description": "",
-      "dueDate": "10082023",
-      "dueTime": "1800",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 19,
-      "taskTitle": "Complete online course",
-      "description": "Watch video lectures and complete assignments",
-      "dueDate": "13082023",
-      "dueTime": "1700",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 20,
-      "taskTitle": "Clean apartment",
-      "description": "",
-      "dueDate": "17082023",
-      "dueTime": "1000",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 21,
-      "taskTitle": "Buy groceries",
-      "description": "",
-      "dueDate": "20072023",
-      "dueTime": "0900",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 22,
-      "taskTitle": "Pay rent",
-      "description": "",
-      "dueDate": "23072023",
-      "dueTime": "1200",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 23,
-      "taskTitle": "Attend fitness class",
-      "description": "",
-      "dueDate": "30072023",
-      "dueTime": "1700",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 24,
-      "taskTitle": "Prepare for job interview",
-      "description": "Research company and practice responses",
-      "dueDate": "14082023",
-      "dueTime": "1400",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 25,
-      "taskTitle": "Buy birthday gift",
-      "description": "",
-      "dueDate": "18082023",
-      "dueTime": "1600",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 26,
-      "taskTitle": "Schedule oil change",
-      "description": "",
-      "dueDate": "22082023",
-      "dueTime": "1100",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 27,
-      "taskTitle": "Attend family reunion",
-      "description": "",
-      "dueDate": "26082023",
-      "dueTime": "1200",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 28,
-      "taskTitle": "Prepare for presentation",
-      "description": "Create slides and practice delivery",
-      "dueDate": "30082023",
-      "dueTime": "0900",
-      "important": true,
-      "completed": false
-    },
-    {
-      "id": 29,
-      "taskTitle": "Attend concert",
-      "description": "",
-      "dueDate": "03092023",
-      "dueTime": "2000",
-      "important": false,
-      "completed": false
-    },
-    {
-      "id": 30,
-      "taskTitle": "Go on weekend trip",
-      "description": "Pack bags and make travel arrangements",
-      "dueDate": "07092023",
-      "dueTime": "1000",
-      "important": true,
-      "completed": false
-    },
-    {
-      "taskTitle": "buy money",
-      "dueDate": "11/04/2023",
-      "dueTime": "10:45",
-      "description": "maxxx",
-      "completed": true,
-      "important": false,
-      "id": 31
-    },
-    {
-      "taskTitle": "buy tax",
-      "dueDate": "07/04/2023",
-      "dueTime": "12:45",
-      "description": "11111",
-      "important": true,
-      "completed": true,
-      "id": 32
-    },
-    {
-      "taskTitle": "buy laptop",
-      "dueDate": "14/04/2023",
-      "dueTime": "12:59",
-      "description": "max",
-      "completed": false,
-      "important": false,
-      "id": 33
     }
   ],
   "listNames": [
@@ -292,34 +73,14 @@
       "id": 2
     },
     {
-      "label": "mack",
-      "path": "/mack",
+      "label": "sundar",
+      "path": "/sundar",
       "id": 3
     },
     {
-      "label": "all",
+      "label": "All Tasks",
       "path": "/all",
       "id": 4
-    },
-    {
-      "label": "hello",
-      "path": "/hello",
-      "id": 5
-    },
-    {
-      "label": "hhhhhhhhh",
-      "path": "/hhhhhhhhh",
-      "id": 6
-    },
-    {
-      "label": "kkkkkkkkkkk",
-      "path": "/kkkkkkkkkkk",
-      "id": 7
-    },
-    {
-      "label": "5555",
-      "path": "/5555",
-      "id": 8
     }
   ]
 }

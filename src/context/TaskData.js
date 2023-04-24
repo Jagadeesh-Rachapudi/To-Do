@@ -17,6 +17,7 @@ function Provider({ children }) {
     dueTime,
     description,
     important,
+    listName,
   }) => {
     const response = await axios.post("http://localhost:3001/data", {
       taskTitle,
@@ -25,6 +26,7 @@ function Provider({ children }) {
       description,
       completed: false,
       important,
+      listName,
     });
 
     const updatedData = [...data, response.data];
