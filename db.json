@@ -287,19 +287,44 @@
       "path": "/"
     },
     {
-      "id": 2,
       "label": "work",
-      "path": "/work"
+      "path": "/work",
+      "id": 2
     },
     {
-      "id": 3,
-      "label": "bavx",
-      "path": "/bavx"
+      "label": "mack",
+      "path": "/mack",
+      "id": 3
     },
     {
-      "id": 20,
+      "label": "all",
+      "path": "/all",
+      "id": 4
+    },
+    {
+      "label": "hello",
+      "path": "/hello",
+      "id": 5
+    },
+    {
       "label": "sundar",
-      "path": "/sundar"
+      "path": "/sundar",
+      "id": 6
+    },
+    {
+      "label": "mastaru",
+      "path": "/mastaru",
+      "id": 7
+    },
+    {
+      "label": "aggipetta",
+      "path": "/aggipetta",
+      "id": 8
+    },
+    {
+      "label": "unda",
+      "path": "/unda",
+      "id": 9
     }
   ]
 }

@@ -13,7 +13,6 @@ function ListNameProvider({ children }) {
 
   const createListName = async ({ label, path }) => {
     const response = await axios.post("http://localhost:3001/listNames", {
-      id: 20,
       label,
       path,
     });
