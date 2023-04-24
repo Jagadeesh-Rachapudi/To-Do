@@ -5,7 +5,6 @@ function Route({ path, children }) {
   const { currentPath } = useNavigation();
 
   if (path === currentPath) {
-    console.log(path, currentPath);
     return children;
   }
 

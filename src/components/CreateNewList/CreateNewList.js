@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import useListName from "../../hooks/use-listName-context";
 
 function CreateNewList(props) {
   const [listName, setListName] = useState("");
   const [showWarning, setShowWarning] = useState(false);
+  const { createListName } = useListName();
+  const [Label, setLabel] = useState("");
 
   const handleListNameChange = (event) => {
     setListName(event.target.value);
@@ -16,16 +18,25 @@ function CreateNewList(props) {
     event.preventDefault();
     if (!listName) {
       setShowWarning(true);
-      return;
+    } else {
+      props.onHide();
+      console.log(listName.split(" ")[0]);
+      createListName({
+        label: listName.split(" ")[0],
+        path: "/" + listName.split(" ")[0].toLocaleLowerCase(),
+      });
+      setListName("");
     }
-    console.log(listName);
-    props.onHide();
-    setListName("");
   };
 
   const footer = (
     <Modal.Footer>
-      <button onClick={props.onHide} class="btn btn-light mb-1 new-list-btn">
+      <button
+        onClick={handleSubmit}
+        class="new-list-btn btn btn-light mb-1"
+        type="submit"
+        style={{ color: "black" }}
+      >
         Add List
       </button>
     </Modal.Footer>
@@ -52,7 +63,7 @@ function CreateNewList(props) {
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formListName">
+          <Form.Group controlId="formListName" className="mb-3">
             <Form.Label>List Name</Form.Label>
             <Form.Control
               type="text"

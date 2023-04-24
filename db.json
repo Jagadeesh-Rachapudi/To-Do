@@ -279,5 +279,27 @@
       "important": false,
       "id": 33
     }
+  ],
+  "listNames": [
+    {
+      "id": 1,
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "id": 2,
+      "label": "work",
+      "path": "/work"
+    },
+    {
+      "id": 3,
+      "label": "bavx",
+      "path": "/bavx"
+    },
+    {
+      "id": 20,
+      "label": "sundar",
+      "path": "/sundar"
+    }
   ]
 }

@@ -2,15 +2,17 @@ import "./App.css";
 import { useEffect } from "react";
 import useTasksContext from "./hooks/use-task-context";
 import All from "./Pages/All";
-import Link from "./utils/Link";
 import Route from "./utils/Route";
 import Topbar from "./utils/TopBar";
 import Home from "./Pages/Home";
+import useListName from "./hooks/use-listName-context";
 
 function App() {
   const { fetchTasks } = useTasksContext();
+  const { fetchListNames } = useListName();
   useEffect(() => {
     fetchTasks();
+    fetchListNames();
   }, []);
 
   return (

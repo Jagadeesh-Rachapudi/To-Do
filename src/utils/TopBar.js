@@ -2,24 +2,21 @@ import { useState } from "react";
 import Link from "./Link";
 import "./utils.scss";
 import CreateNewList from "../components/CreateNewList/CreateNewList";
+import useListName from "../hooks/use-listName-context";
 
 function Topbar() {
   const [modalShow, setModalShow] = useState(false);
+  const { listNames } = useListName();
 
-  const links = [
-    { label: "Home", path: "/" },
-    { label: "All Task", path: "/all" },
-  ];
-
-  const renderedLinks = links.map((link) => {
+  const renderedLinks = listNames.map((listName) => {
     return (
       <Link
-        key={link.label}
-        to={link.path}
+        key={listName.label}
+        to={listName.path}
         className="link mb-3"
         activeClassName="active"
       >
-        {link.label}
+        {listName.label}
       </Link>
     );
   });
