@@ -23,7 +23,7 @@ function Provider({ children }) {
       dueDate,
       dueTime,
       description,
-      completed: true,
+      completed: false,
       important,
     });
 
