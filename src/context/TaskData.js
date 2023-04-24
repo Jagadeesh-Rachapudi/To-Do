@@ -32,11 +32,9 @@ function Provider({ children }) {
   };
 
   const editTaskbyId = async (id, updatedTask) => {
-    const response = await axios.put(
-      `http://localhost:3001/data/${id}`,
-      updatedTask
-    );
-
+    const response = await axios.put(`http://localhost:3001/data/${id}`, {
+      ...updatedTask,
+    });
     const updatedData = data.map((task) => {
       if (task.id === id) {
         return { ...task, ...response.data };
@@ -44,6 +42,8 @@ function Provider({ children }) {
 
       return task;
     });
+
+    console.log(response.data);
 
     setData(updatedData);
   };

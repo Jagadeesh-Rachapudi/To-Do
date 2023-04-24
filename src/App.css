@@ -23,6 +23,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 .App-link {
   color: #61dafb;

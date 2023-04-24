@@ -1,315 +1,256 @@
 {
   "data": [
     {
-      "taskTitle": "Finish report for work project",
-      "dueDate": "25/04/2023",
-      "dueTime": "17:00",
-      "description": "Need to summarize findings and present recommendations.",
-      "important": false,
-      "completed": true,
-      "id": 1
-    },
-    {
+      "id": 1,
       "taskTitle": "Buy groceries",
-      "dueDate": "26/04/2023",
-      "dueTime": "13:00",
-      "description": "Need to get milk, eggs, bread, and fruit.",
-      "completed": true,
-      "important": false,
-      "id": 2
-    },
-    {
-      "taskTitle": "Jagadeesh tenison ",
-      "dueDate": "25/04/2023",
-      "dueTime": "17:00",
-      "description": "Need to summarize findings and present recommendations.",
-      "important": false,
-      "completed": true,
-      "id": 3
-    },
-    {
-      "taskTitle": "Go for a run",
-      "dueDate": "23/04/2023",
-      "dueTime": "07:00",
-      "description": "Want to get some exercise before work.",
-      "important": false,
-      "id": 9
-    },
-    {
-      "taskTitle": "Watch new movie",
-      "dueDate": "25/04/2023",
-      "dueTime": "20:30",
-      "description": "Have been wanting to see this for a while.",
-      "important": false,
-      "completed": false,
-      "id": 10
-    },
-    {
-      "taskTitle": "Pay re",
-      "dueDate": "01/05/2023",
-      "dueTime": "12:00",
-      "description": "",
-      "important": false,
-      "id": 12
-    },
-    {
-      "taskTitle": "Organize closet",
-      "dueDate": "30/04/2023",
-      "dueTime": "16:00",
-      "description": "Sort clothes and donate items I don't wear.",
-      "important": false,
-      "completed": false,
-      "id": 13
-    },
-    {
-      "taskTitle": "Call insurance company",
-      "dueDate": "28/04/2023",
+      "description": "Milk, bread, eggs, butter",
+      "dueDate": "05/01/2023",
       "dueTime": "10:00",
-      "description": "Need to update policy and ask about coverage.",
-      "important": false,
-      "completed": false,
-      "id": 14
-    },
-    {
-      "taskTitle": "Attend meeting",
-      "dueDate": "02/05/2023",
-      "dueTime": "11:00",
-      "description": "Discuss project progress with team.",
-      "important": false,
-      "completed": false,
-      "id": 15
-    },
-    {
-      "taskTitle": "Plan birthday party",
-      "dueDate": "03/05/2023",
-      "dueTime": "18:00",
-      "description": "Organize guest list and decorations.",
-      "completed": false,
       "important": true,
-      "id": 16
+      "completed": false
     },
     {
-      "taskTitle": "Buy new shoes",
-      "dueDate": "29/04/2023",
-      "dueTime": "15:00",
-      "description": "Need comfortable pair for work.",
+      "taskTitle": "Exercise",
+      "dueDate": "05/07/2023",
+      "dueTime": "07:00",
+      "description": "Go for a run",
       "important": false,
+      "completed": true,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "taskTitle": "Pay bills",
+      "description": "Electricity, water, internet",
+      "dueDate": "05/10/2023",
+      "dueTime": "12:00",
+      "important": true,
+      "completed": false
+    },
+    {
+      "id": 6,
+      "taskTitle": "Call mom",
+      "description": "",
+      "dueDate": "05/12/2023",
+      "dueTime": "16:00",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 7,
+      "taskTitle": "Read book",
+      "description": "The Catcher in the Rye",
+      "dueDate": "05/14/2023",
+      "dueTime": "20:00",
+      "important": false,
+      "completed": false
+    },
+    {
+      "taskTitle": "Meet with colleagues",
+      "dueDate": "05/17/2023",
+      "dueTime": "11:00",
+      "description": "Discuss project progress",
+      "important": true,
       "completed": false,
-      "id": 17
+      "id": 8
+    },
+    {
+      "id": 9,
+      "taskTitle": "Renew library books",
+      "description": "",
+      "dueDate": "05/19/2023",
+      "dueTime": "13:00",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 10,
+      "taskTitle": "Buy birthday gift",
+      "description": "For sister",
+      "dueDate": "05/22/2023",
+      "dueTime": "09:00",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 11,
+      "taskTitle": "Send invoices",
+      "description": "Follow up on overdue payments",
+      "dueDate": "30062023",
+      "dueTime": "1600",
+      "important": true,
+      "completed": false
+    },
+    {
+      "id": 12,
+      "taskTitle": "Buy concert tickets",
+      "description": "",
+      "dueDate": "15072023",
+      "dueTime": "1200",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 13,
+      "taskTitle": "Plan weekend getaway",
+      "description": "Research destinations and book accommodations",
+      "dueDate": "21072023",
+      "dueTime": "1500",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 14,
+      "taskTitle": "Attend doctor's appointment",
+      "description": "",
+      "dueDate": "25072023",
+      "dueTime": "1000",
+      "important": true,
+      "completed": false
+    },
+    {
+      "id": 15,
+      "taskTitle": "Submit report",
+      "description": "Gather and analyze data",
+      "dueDate": "29072023",
+      "dueTime": "0900",
+      "important": true,
+      "completed": false
+    },
+    {
+      "id": 16,
+      "taskTitle": "Meet with client",
+      "description": "Discuss project updates",
+      "dueDate": "02082023",
+      "dueTime": "1400",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 17,
+      "taskTitle": "Buy new phone",
+      "description": "",
+      "dueDate": "06082023",
+      "dueTime": "1100",
+      "important": false,
+      "completed": false
     },
     {
       "id": 18,
-      "taskTitle": "Read industry news",
-      "dueDate": "01/05/2023",
-      "dueTime": "09:00",
-      "description": "Stay up-to-date on developments in my field.",
-      "completed": false,
-      "important": false
-    },
-    {
-      "taskTitle": "Do laundry",
-      "dueDate": "28/04/2023",
-      "dueTime": "12:00",
+      "taskTitle": "Attend networking event",
       "description": "",
-      "important": false,
-      "completed": false,
-      "id": 19
-    },
-    {
-      "taskTitle": "Practice guitar",
-      "dueDate": "02/05/2023",
-      "dueTime": "20:00",
-      "description": "Work on new song I've been learning.",
-      "important": false,
-      "completed": false,
-      "id": 20
-    },
-    {
-      "taskTitle": "Buy birthday gift",
-      "dueDate": "03/05/2023",
-      "dueTime": "14:00",
-      "description": "Friend's birthday coming up.",
-      "important": false,
-      "completed": false,
-      "id": 21
-    },
-    {
-      "taskTitle": "Prepare for job interview",
-      "dueDate": "05/05/2023",
-      "dueTime": "11:00",
-      "description": "Research company and practice responses to common questions.",
-      "important": false,
-      "completed": false,
-      "id": 23
-    },
-    {
-      "taskTitle": "jagsy",
-      "dueDate": "07/04/2023",
-      "dueTime": "13:00",
-      "description": "Need food ",
+      "dueDate": "10082023",
+      "dueTime": "1800",
       "important": true,
-      "id": 24
+      "completed": false
     },
     {
-      "taskTitle": "Schedule oil change",
-      "dueDate": "02/05/2023",
-      "dueTime": "09:00",
-      "description": "Car is due for regular maintenance.",
+      "id": 19,
+      "taskTitle": "Complete online course",
+      "description": "Watch video lectures and complete assignments",
+      "dueDate": "13082023",
+      "dueTime": "1700",
+      "important": true,
+      "completed": false
+    },
+    {
+      "id": 20,
+      "taskTitle": "Clean apartment",
+      "description": "",
+      "dueDate": "17082023",
+      "dueTime": "1000",
       "important": false,
-      "completed": false,
-      "id": 25
+      "completed": false
+    },
+    {
+      "id": 21,
+      "taskTitle": "Buy groceries",
+      "description": "",
+      "dueDate": "20072023",
+      "dueTime": "0900",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 22,
+      "taskTitle": "Pay rent",
+      "description": "",
+      "dueDate": "23072023",
+      "dueTime": "1200",
+      "important": true,
+      "completed": false
+    },
+    {
+      "id": 23,
+      "taskTitle": "Attend fitness class",
+      "description": "",
+      "dueDate": "30072023",
+      "dueTime": "1700",
+      "important": false,
+      "completed": false
+    },
+    {
+      "id": 24,
+      "taskTitle": "Prepare for job interview",
+      "description": "Research company and practice responses",
+      "dueDate": "14082023",
+      "dueTime": "1400",
+      "important": true,
+      "completed": false
+    },
+    {
+      "id": 25,
+      "taskTitle": "Buy birthday gift",
+      "description": "",
+      "dueDate": "18082023",
+      "dueTime": "1600",
+      "important": false,
+      "completed": false
     },
     {
       "id": 26,
-      "taskTitle": "Watch movie",
-      "dueDate": "01/05/2023",
-      "dueTime": "19:00",
-      "description": "Been wanting to see the latest superhero film.",
-      "completed": false,
-      "important": false
+      "taskTitle": "Schedule oil change",
+      "description": "",
+      "dueDate": "22082023",
+      "dueTime": "1100",
+      "important": false,
+      "completed": false
     },
     {
-      "taskTitle": "Go for a run",
-      "dueDate": "28/04/2023",
-      "dueTime": "07:00",
-      "description": "Need to get some exercise.",
-      "important": false,
-      "completed": false,
-      "id": 27
+      "id": 27,
+      "taskTitle": "Attend family reunion",
+      "description": "",
+      "dueDate": "26082023",
+      "dueTime": "1200",
+      "important": true,
+      "completed": false
     },
     {
       "id": 28,
-      "taskTitle": "Attend book club",
-      "dueDate": "04/05/2023",
-      "dueTime": "19:30",
-      "description": "Discuss latest selection with group.",
-      "completed": false,
-      "important": false
+      "taskTitle": "Prepare for presentation",
+      "description": "Create slides and practice delivery",
+      "dueDate": "30082023",
+      "dueTime": "0900",
+      "important": true,
+      "completed": false
     },
     {
       "id": 29,
-      "taskTitle": "Take recycling to the center",
-      "dueDate": "30/04/2023",
-      "dueTime": "10:00",
-      "description": "Have accumulated a lot of cardboard and paper.",
-      "completed": false,
-      "important": false
-    },
-    {
-      "taskTitle": "Clean bathroom",
-      "dueDate": "28/04/2023",
-      "dueTime": "14:00",
-      "description": "Scrub sink, toilet, and shower.",
-      "important": false,
-      "completed": false,
-      "id": 30
-    },
-    {
-      "id": 31,
-      "taskTitle": "Make doctor's appointment",
-      "dueDate": "05/05/2023",
-      "dueTime": "13:00",
-      "description": "Need to get a physical and check on a lingering cough.",
-      "completed": false,
-      "important": false
-    },
-    {
-      "id": 32,
-      "taskTitle": "Take online course",
-      "dueDate": "04/05/2023",
-      "dueTime": "11:00",
-      "description": "Brush up on skills related to my job.",
-      "completed": false,
-      "important": false
-    },
-    {
-      "taskTitle": "max",
-      "dueDate": "21/04/2023",
-      "dueTime": "23:58",
-      "description": "max",
-      "important": false,
-      "completed": false,
-      "id": 33
-    },
-    {
-      "taskTitle": "JAggasssi",
-      "dueDate": "16/04/2023",
-      "dueTime": "11:00",
-      "description": "aaaaaaaaaa",
-      "completed": false,
-      "important": false,
-      "id": 34
-    },
-    {
-      "taskTitle": "helloMAXXX",
-      "dueDate": "10/04/2023",
-      "dueTime": "17:00",
-      "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "important": false,
-      "completed": false,
-      "id": 35
-    },
-    {
-      "taskTitle": "cfgvhjbkl,m, bhg",
-      "dueDate": "06/04/2023",
-      "dueTime": "12:00",
+      "taskTitle": "Attend concert",
       "description": "",
+      "dueDate": "03092023",
+      "dueTime": "2000",
       "important": false,
-      "completed": false,
-      "id": 36
+      "completed": false
     },
     {
-      "taskTitle": "Take bath",
-      "dueDate": "10/04/2023",
-      "dueTime": "12:45 AM",
-      "description": "",
-      "completed": false,
-      "important": false,
-      "id": 37
-    },
-    {
-      "taskTitle": "take break",
-      "dueDate": "02/05/2023",
-      "dueTime": "1:45 PM",
-      "description": "",
-      "completed": false,
-      "important": false,
-      "id": 38
-    },
-    {
-      "taskTitle": "vomit it ",
-      "dueDate": "20/04/2023",
-      "description": "",
-      "completed": false,
-      "important": false,
-      "id": 39
-    },
-    {
-      "taskTitle": "max tenison",
-      "dueDate": "11/04/2023",
-      "dueTime": "13:00",
-      "description": "",
-      "completed": false,
-      "important": false,
-      "id": 40
-    },
-    {
-      "taskTitle": "APPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPLLLLLLLLLLLLLLLLLLLLLE",
-      "dueDate": "13/04/2023",
-      "dueTime": "23:45",
-      "description": "APPLE",
+      "id": 30,
+      "taskTitle": "Go on weekend trip",
+      "description": "Pack bags and make travel arrangements",
+      "dueDate": "07092023",
+      "dueTime": "1000",
       "important": true,
-      "completed": false,
-      "id": 41
-    },
-    {
-      "taskTitle": "test",
-      "dueDate": "24/04/2023",
-      "dueTime": "03:50",
-      "description": "hello",
-      "completed": true,
-      "important": true,
-      "id": 42
+      "completed": false
     }
   ]
 }

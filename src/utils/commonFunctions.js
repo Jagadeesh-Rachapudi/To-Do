@@ -21,7 +21,7 @@ export const convertTo24HourFormat = ({ time }) => {
   return `${hoursFormatted}:${minutesFormatted}`;
 };
 
-export const convertTo12HourFormat = ({timeString}) => {
+export const convertTo12HourFormat = ({ timeString }) => {
   let [hours, minutes] = timeString.split(":");
   const suffix = hours >= 12 ? "PM" : "AM";
   hours = hours % 12 || 12;
@@ -30,3 +30,12 @@ export const convertTo12HourFormat = ({timeString}) => {
 
   return `${hours}:${minutes} ${suffix}`;
 };
+
+export let pageHeight = Math.max(
+  document.body.scrollHeight,
+  document.documentElement.scrollHeight,
+  document.body.offsetHeight,
+  document.documentElement.offsetHeight,
+  document.body.clientHeight,
+  document.documentElement.clientHeight
+);

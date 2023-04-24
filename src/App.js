@@ -1,26 +1,29 @@
 import "./App.css";
-import TaskList from "./components/TaskList/TaskList";
-import CreateTask from "./components/CreateTask/CreateTask";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useTasksContext from "./hooks/use-task-context";
-import TimePicker from "react-time-picker";
-// import Test from "./Test";
+import All from "./Pages/All";
+import Link from "./utils/Link";
+import Route from "./utils/Route";
+import Topbar from "./utils/TopBar";
+import Home from "./Pages/Home";
 
 function App() {
-  const [time, setTime] = useState("12:00");
-  const handleTimeChange = (value) => {
-    setTime(value);
-  };
   const { fetchTasks } = useTasksContext();
-
   useEffect(() => {
     fetchTasks();
   }, []);
 
   return (
     <div className="App">
-      <TaskList />
-      <CreateTask />
+      <Topbar />
+      <div className="col-span-5">
+        <Route path="/all">
+          <All />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </div>
     </div>
   );
 }

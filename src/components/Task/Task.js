@@ -11,6 +11,7 @@ import useTasksContext from "../../hooks/use-task-context";
 import Confetti from "react-confetti";
 import { RxCross1 } from "react-icons/rx";
 import EditTask from "../EditTask/EditTask.js";
+import { pageHeight } from "../../utils/commonFunctions";
 
 const Task = ({
   id,
@@ -65,15 +66,6 @@ const Task = ({
     stopConfetti();
   }, [taskDoneNow, pieces]);
 
-  let pageHeight = Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.offsetHeight,
-    document.body.clientHeight,
-    document.documentElement.clientHeight
-  );
-
   const handleDeleteTask = () => {
     deleteTaskById(id);
   };
@@ -87,6 +79,10 @@ const Task = ({
       <EditTask showModel={true} taskID={id} />
     </>
   ) : null;
+
+  useEffect(() => {
+    setFromatedDueDate(formatDate(dueDate));
+  }, [dueDate]);
 
   const showNotification = DateTimeMatcher({ dueDate, dueTime });
   return (
@@ -174,8 +170,18 @@ const Task = ({
           )}
         </div>
       </Card>
-      {showNotification && (
-        <Notification taskTitle={taskTitle} showNoti={showNotification} />
+      {showNotification && !completed && (
+        <Notification
+          onComplete={handleCompletedChange}
+          taskTitle={taskTitle}
+          id={id}
+          dueDate={dueDate}
+          dueTime={dueTime}
+          description={description}
+          completed={completed}
+          important={important}
+          showNoti={showNotification}
+        />
       )}
       {taskDoneNow ? (
         <Confetti gravity={0.2} numberOfPieces={pieces} height={pageHeight} />
