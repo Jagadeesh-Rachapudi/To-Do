@@ -45,7 +45,10 @@ const Task = ({
 
   const handleCompletedChange = () => {
     settaskDoneNow(true);
-    setPieces(500);
+    if (!completed) {
+      setPieces(500);
+    }
+
     editTaskbyId(id, {
       taskTitle,
       dueDate,
@@ -59,7 +62,7 @@ const Task = ({
   const stopConfetti = () => {
     setTimeout(() => {
       setPieces(0);
-    }, 5000);
+    }, 3000);
   };
 
   useEffect(() => {
@@ -142,28 +145,32 @@ const Task = ({
             <div>{dueTime}</div>
           </div>
         </div>
-        <div className="mt-auto" onClick={handleImportantChange}>
+        <div className="mt-auto">
           {important && !hoveredStar ? (
             <AiFillStar
               className="default-star me-2 mb-1 cursor-pointer"
+              onClick={handleImportantChange}
               onMouseEnter={() => setHoveredStar(true)}
               onMouseLeave={() => setHoveredStar(false)}
             />
           ) : important && hoveredStar ? (
             <AiOutlineStar
               className="hover-star me-2 mb-1 cursor-pointer"
+              onClick={handleImportantChange}
               onMouseEnter={() => setHoveredStar(true)}
               onMouseLeave={() => setHoveredStar(false)}
             />
           ) : !important && hoveredStar ? (
             <AiFillStar
               className="hover-star me-2 mb-1 cursor-pointer"
+              onClick={handleImportantChange}
               onMouseEnter={() => setHoveredStar(true)}
               onMouseLeave={() => setHoveredStar(false)}
             />
           ) : (
             <AiOutlineStar
               className="default-star me-2 mb-1 cursor-pointer"
+              onClick={handleImportantChange}
               onMouseEnter={() => setHoveredStar(true)}
               onMouseLeave={() => setHoveredStar(false)}
             />
