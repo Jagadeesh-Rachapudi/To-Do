@@ -3,7 +3,8 @@ import axios from "axios";
 
 const TaskContext = createContext();
 
-function Provider({ children }) {
+function TaskPovider({ children }) {
+
   const [data, setData] = useState([]);
 
   const fetchTasks = async () => {
@@ -76,5 +77,5 @@ function Provider({ children }) {
   );
 }
 
-export { Provider };
+export { TaskPovider };
 export default TaskContext;
