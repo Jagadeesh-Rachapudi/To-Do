@@ -4,12 +4,11 @@ import axios from "axios";
 const TaskContext = createContext();
 
 function TaskPovider({ children }) {
-
-  const [data, setData] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   const fetchTasks = async () => {
-    const response = await axios.get("http://localhost:3001/data");
-    setData(response.data);
+    const response = await axios.get("http://localhost:3001/tasks");
+    setTasks(response.data);
   };
 
   const createTask = async ({
@@ -20,7 +19,7 @@ function TaskPovider({ children }) {
     important,
     listName,
   }) => {
-    const response = await axios.post("http://localhost:3001/data", {
+    const response = await axios.post("http://localhost:3001/tasks", {
       taskTitle,
       dueDate,
       dueTime,
@@ -30,15 +29,15 @@ function TaskPovider({ children }) {
       listName,
     });
 
-    const updatedData = [...data, response.data];
-    setData(updatedData);
+    const updatedTasks = [...tasks, response.data];
+    setTasks(updatedTasks);
   };
 
   const editTaskbyId = async (id, updatedTask) => {
-    const response = await axios.put(`http://localhost:3001/data/${id}`, {
+    const response = await axios.put(`http://localhost:3001/tasks/${id}`, {
       ...updatedTask,
     });
-    const updatedData = data.map((task) => {
+    const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
         return { ...task, ...response.data };
       }
@@ -46,25 +45,22 @@ function TaskPovider({ children }) {
       return task;
     });
 
-    console.log(response.data);
-
-    setData(updatedData);
+    setTasks(updatedTasks);
   };
 
   const deleteTaskById = async (id) => {
-    await axios.delete(`http://localhost:3001/data/${id}`);
+    await axios.delete(`http://localhost:3001/tasks/${id}`);
 
-    const updatedData = data.filter((task) => {
+    const updatedtasks = tasks.filter((task) => {
       return task.id !== id;
     });
-
-    setData(updatedData);
+    setTasks(updatedtasks);
   };
 
-  const getTaskById = (Id) => data.find((task) => task.id === Id);
+  const getTaskById = (Id) => tasks.find((task) => task.id === Id);
 
   const valueToShare = {
-    data,
+    tasks,
     fetchTasks,
     createTask,
     editTaskbyId,

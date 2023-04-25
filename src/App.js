@@ -12,7 +12,7 @@ import Task from "./components/Task/Task";
 import useNavigation from "./hooks/useNavigation";
 
 function App() {
-  const { data, fetchTasks } = useTasksContext();
+  const { tasks, fetchTasks } = useTasksContext();
   const { listNames, fetchListNames } = useListName();
   const { currentPath } = useNavigation();
 
@@ -24,7 +24,7 @@ function App() {
   const renderRoutes = listNames.map((listName) => {
     let renderTasks =
       listName.path === "/all"
-        ? data.map(
+        ? tasks.map(
             ({
               id,
               taskTitle,
@@ -47,7 +47,7 @@ function App() {
               </div>
             )
           )
-        : data
+        : tasks
             .filter((task) => task.listName === listName.path)
             .map(
               ({
@@ -72,7 +72,7 @@ function App() {
                 </div>
               )
             );
-                
+
     return (
       <Route path={listName.path}>
         <TaskList renderTasks={renderTasks} />
