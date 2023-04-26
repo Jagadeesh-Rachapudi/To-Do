@@ -19,27 +19,22 @@ function App() {
   const [doFetchTasks, isLoading, error] = useThunk(fetchTasks);
   const [doFetchListNames] = useThunk(fetchListNames);
 
-  const { data } = useSelector((state) => {
-    return state.tasks;
+  const { data, listNamesData } = useSelector((state) => {
+    return {
+      data: state.tasks,
+      listNamesData: state.listNames.listNamesData,
+    };
   });
 
-  const { listNames } = useSelector((state) => {
-    return state.listNames;
-  });
-
-  console.log(listNames.lenght,"lenght");
   useEffect(() => {
     doFetchTasks();
+    doFetchListNames();
   }, [doFetchTasks]);
 
-  useEffect(() => {
-    doFetchListNames();
-  }, [doFetchListNames]);
-
-  const renderRoutes = listNames.map((listName) => {
+  const renderRoutes = listNamesData.map((listName) => {
     let renderTasks =
       listName.path === "/all"
-        ? data.map(
+        ? data.data.map(
             ({
               id,
               taskTitle,
@@ -64,7 +59,7 @@ function App() {
               </div>
             )
           )
-        : data
+        : data.data
             .filter((task) => task.listName === listName.path)
             .map(
               ({
@@ -94,7 +89,7 @@ function App() {
 
     return (
       <Route path={listName.path}>
-        <TaskList renderTasks={renderTasks || []} />
+        <TaskList renderTasks={renderTasks} />
       </Route>
     );
   });

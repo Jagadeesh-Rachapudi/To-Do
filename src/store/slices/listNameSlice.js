@@ -1,22 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createListName } from "../thunks/createList";
+import { fetchListNames } from "../thunks/fetchListNames";
 
 const listNameSlice = createSlice({
   name: "listNames",
   initialState: {
-    listNames: [],
+    listNamesData: [],
     isLoading: false,
     error: null,
   },
   extraReducers(builder) {
-    builder.addCase(createListName.pending, (state, action) => {
+    builder.addCase(fetchListNames.pending, (state, action) => {
       state.isLoading = true;
     });
-    builder.addCase(createListName.fulfilled, (state, action) => {
+    builder.addCase(fetchListNames.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.listNames.push(action.payload);
+      state.listNamesData = action.payload;
     });
-    builder.addCase(createListName.rejected, (state, action) => {
+    builder.addCase(fetchListNames.rejected, (state, action) => {
       state.isLoading = false;
       state.error = action.error;
     });

@@ -5,6 +5,7 @@ import "./utils.scss";
 import CreateNewList from "../components/CreateNewList/CreateNewList";
 import useListName from "../hooks/use-listName-context";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useSelector } from "react-redux";
 
 function Topbar() {
   const [show, setShow] = useState(false);
@@ -12,9 +13,14 @@ function Topbar() {
   const handleShow = () => setShow(true);
 
   const [modalShow, setModalShow] = useState(false);
-  const { listNames } = useListName();
 
-  const renderedLinks = listNames.map((listName) => {
+  const { listNamesData } = useSelector((state) => {
+    return {
+      listNamesData: state.listNames.listNamesData,
+    };
+  });
+
+  const renderedLinks = listNamesData.map((listName) => {
     return (
       <Link
         key={listName.label}
@@ -54,7 +60,7 @@ function Topbar() {
         <button
           type="button"
           className={`btn btn-light mb-1 new-list-btn ${
-            listNames.length <= 7 ? "" : "disabled-btn"
+            listNamesData.length <= 7 ? "" : "disabled-btn"
           }`}
           onClick={() => setModalShow(true)}
         >
@@ -62,7 +68,7 @@ function Topbar() {
         </button>
       </div>
 
-      {listNames.length <= 7 ? (
+      {listNamesData.length <= 7 ? (
         <CreateNewList show={modalShow} onHide={() => setModalShow(false)} />
       ) : null}
       <div>

@@ -6,9 +6,9 @@
       "dueTime": "10:00",
       "description": "Milk, bread, eggs, butter",
       "important": false,
-      "completed": false,
-      "id": 1,
-      "listName": "/personal"
+      "completed": true,
+      "listName": "/personal",
+      "id": 1
     },
     {
       "taskTitle": "Clean the house",
@@ -36,9 +36,9 @@
       "dueTime": "18:00",
       "description": "Review lecture notes and textbook",
       "important": false,
-      "completed": false,
-      "id": 4,
-      "listName": "/learning"
+      "completed": true,
+      "listName": "/learning",
+      "id": 4
     },
     {
       "taskTitle": "Go for a run",
@@ -46,9 +46,9 @@
       "dueTime": "08:00",
       "description": "5 miles at moderate pace",
       "important": false,
-      "completed": false,
-      "id": 5,
-      "listName": "/exercise"
+      "completed": true,
+      "listName": "/exercise",
+      "id": 5
     },
     {
       "taskTitle": "Visit dentis",
@@ -93,9 +93,9 @@
       "dueTime": "20:00",
       "description": "Crime and Punishment by Fyodor Dostoevsky",
       "important": false,
-      "completed": false,
-      "id": 10,
-      "listName": "/personal"
+      "completed": true,
+      "listName": "/personal",
+      "id": 10
     },
     {
       "taskTitle": "Check-upP",
