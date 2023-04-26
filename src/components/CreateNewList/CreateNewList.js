@@ -21,10 +21,6 @@ function CreateNewList(props) {
       setShowWarning(true);
     } else {
       props.onHide();
-      // createListName({
-      //   label: listName.split(" ")[0],
-      //   path: "/" + listName.split(" ")[0].toLocaleLowerCase(),
-      // });
       console.log("hello");
       doCreateListName({
         label: listName.split(" ")[0],

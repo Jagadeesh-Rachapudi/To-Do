@@ -1,5 +1,5 @@
-import "./App.css";
-import { useEffect } from "react";
+import "./App.scss";
+import { useEffect, useState } from "react";
 import Route from "./utils/Route";
 import Topbar from "./utils/TopBar";
 import Home from "./Pages/Home";
@@ -13,11 +13,19 @@ import { useSelector } from "react-redux";
 import { useThunk } from "./hooks/use-thunk";
 import { fetchListNames } from "./store";
 import TaskSkeleton from "./components/Task/TaskSkeleton";
+import Flippy, { FrontSide, BackSide } from "react-flippy";
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
 
 function App() {
   const { currentPath } = useNavigation();
   const [doFetchTasks, isLoading, error] = useThunk(fetchTasks);
   const [doFetchListNames] = useThunk(fetchListNames);
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const flipCard = () => {
+    setIsFlipped(!isFlipped);
+  };
 
   const { data, listNamesData } = useSelector((state) => {
     return {
@@ -112,8 +120,45 @@ function App() {
     <div className="App">
       <Topbar />
       {content}
-      {currentPath === "/" ? <Home /> : null}
+      {currentPath === "/home" ? <Home /> : null}
       {currentPath !== "/all" && currentPath !== "/" ? <CreateTask /> : null}
+
+      {currentPath === "/" ? (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "92vh",
+          }}
+        >
+          <Flippy
+            flipOnClick={false}
+            isFlipped={isFlipped}
+            flipDirection="horizontal"
+            className="flippy-box rounded"
+          >
+            <FrontSide>
+              <Login />
+              <p
+                className="text-right me-3 cursor-pointer signup-link hover:text-blue-500"
+                onClick={flipCard}
+              >
+                Sign up
+              </p>
+            </FrontSide>
+            <BackSide>
+              <SignUp />
+              <p
+                className="text-right me-3 cursor-pointer signup-link hover:text-blue-500"
+                onClick={flipCard}
+              >
+                Login
+              </p>
+            </BackSide>
+          </Flippy>
+        </div>
+      ) : null}
     </div>
   );
 }

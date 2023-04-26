@@ -43,3 +43,25 @@
     transform: rotate(360deg);
   }
 }
+
+.flippy-box {
+  width: 560px;
+  height: 448px;
+  border-radius: 50px !important;
+  .flippy-card.flippy-front {
+    border-radius: 0.35rem;
+    padding: 0;
+    transition-duration: 1s !important;
+  }
+  .signup-link {
+    position: relative;
+    margin-top: -3.5rem;
+    margin-left: 475px !important;
+    z-index: 9;
+    width: fit-content !important;
+  }
+}
+.flippy-card.flippy-back {
+  padding: 0;
+  transition-duration: 1s !important;
+}
