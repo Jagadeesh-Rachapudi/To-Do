@@ -5,13 +5,14 @@ import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import moment from "moment";
 import "../CreateTask/CreateTask.scss";
-import { CgMathPlus } from "react-icons/cg";
-import useTasksContext from "../../hooks/use-task-context";
+import { useDispatch } from "react-redux";
 import TimePicker from "../CreateTask/TimePicker.js";
 import {
   convertTo24HourFormat,
   convertTo12HourFormat,
 } from "../../utils/commonFunctions";
+import { editTaskbyId } from "../../store";
+import { useSelector } from "react-redux";
 
 function EditTask({ showModel = false, taskID }) {
   const [show, setShow] = useState(showModel);
@@ -20,14 +21,19 @@ function EditTask({ showModel = false, taskID }) {
   const [dueDate, setDueDate] = useState("");
   const [dueTime, setDueTime] = useState("");
   const [description, setDescription] = useState("");
+  const [listName, setlistName] = useState("");
   const [errors, setErrors] = useState({
     taskTitle: "",
     dueDate: "",
     dueTime: "",
   });
   const [isClicked, setIsClicked] = useState(false);
-  const { getTaskById, editTaskbyId } = useTasksContext();
   const [timeEntered, setTimeEntered] = useState("");
+  const dispatch = useDispatch();
+
+  const { isLoading, data, error } = useSelector((state) => {
+    return state.tasks;
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,16 +73,21 @@ function EditTask({ showModel = false, taskID }) {
 
     const dueTime24hr = convertTo24HourFormat({ time: dueTime });
 
-    console.log(errors.dueTime);
-
     if (Object.keys(errors).length === 0) {
-      editTaskbyId(taskID, {
-        taskTitle: taskTitle,
-        dueDate: dueDate,
-        dueTime: dueTime24hr,
-        description: description,
-        important: important,
-      });
+      console.log(taskID);
+      dispatch(
+        editTaskbyId({
+          id: taskID,
+          updatedTask: {
+            taskTitle: taskTitle,
+            dueDate: dueDate,
+            dueTime: dueTime24hr,
+            description: description,
+            important: important,
+            listName,
+          },
+        })
+      );
       handleClose();
     } else {
       setErrors(errors);
@@ -135,12 +146,13 @@ function EditTask({ showModel = false, taskID }) {
   };
 
   useEffect(() => {
-    const task = getTaskById(taskID);
+    const task = data.find((task) => task.id === taskID);
     setTaskTitle(task.taskTitle);
     setDueDate(task.dueDate);
     setDueTime(convertTo12HourFormat({ timeString: task.dueTime }));
     setDescription(task.description);
     setImportant(task.important);
+    setlistName(task.listName);
   }, []);
 
   return (

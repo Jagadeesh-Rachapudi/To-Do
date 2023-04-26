@@ -61,7 +61,7 @@ function Notification({
   };
 
   return (
-    <Row>
+    <Row className="notifications" >
       <Col xs={6}>
         <ToastContainer position="bottom-start">
           <Toast

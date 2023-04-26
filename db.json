@@ -2,76 +2,119 @@
   "tasks": [
     {
       "taskTitle": "Buy groceries",
-      "dueDate": "05/01/2023",
+      "dueDate": "01/05/2023",
       "dueTime": "10:00",
       "description": "Milk, bread, eggs, butter",
-      "important": true,
-      "completed": true,
-      "id": 1
-    },
-    {
-      "taskTitle": "Exercise",
-      "dueDate": "05/07/2023",
-      "dueTime": "07:00",
-      "description": "Go for a run",
-      "important": true,
-      "completed": true,
-      "id": 4
-    },
-    {
-      "taskTitle": "max",
-      "dueDate": "05/04/2023",
-      "dueTime": "00:45",
-      "description": "hello",
-      "important": true,
-      "completed": true,
-      "id": 5
-    },
-    {
-      "taskTitle": "work done",
-      "dueDate": "12/04/2023",
-      "dueTime": "00:45",
-      "description": "",
+      "important": false,
       "completed": false,
+      "id": 1,
+      "listName": "/personal"
+    },
+    {
+      "taskTitle": "Clean the house",
+      "dueDate": "02/05/2023",
+      "dueTime": "14:00",
+      "description": "Vacuum, dust, mop floors",
+      "important": true,
+      "completed": false,
+      "id": 2,
+      "listName": "/personal"
+    },
+    {
+      "taskTitle": "Finish project",
+      "dueDate": "05/05/2023",
+      "dueTime": "16:00",
+      "description": "Complete coding and testing",
+      "important": true,
+      "completed": false,
+      "id": 3,
+      "listName": "/work"
+    },
+    {
+      "taskTitle": "Study for exam",
+      "dueDate": "10/05/2023",
+      "dueTime": "18:00",
+      "description": "Review lecture notes and textbook",
+      "important": false,
+      "completed": false,
+      "id": 4,
+      "listName": "/learning"
+    },
+    {
+      "taskTitle": "Go for a run",
+      "dueDate": "15/05/2023",
+      "dueTime": "08:00",
+      "description": "5 miles at moderate pace",
+      "important": false,
+      "completed": false,
+      "id": 5,
+      "listName": "/exercise"
+    },
+    {
+      "taskTitle": "Visit dentis",
+      "dueDate": "20/05/2023",
+      "dueTime": "12:00",
+      "description": "Checkup and cleaning",
       "important": true,
       "id": 6
     },
     {
-      "taskTitle": "sundar",
-      "dueDate": "12/04/2023",
-      "dueTime": "00:45",
-      "description": "hello\n",
+      "taskTitle": "Call mom",
+      "dueDate": "25/05/2023",
+      "dueTime": "20:00",
+      "description": "Catch up on family news",
+      "important": false,
       "completed": true,
-      "important": true,
       "id": 7
     },
     {
-      "taskTitle": "Jaggu bhai",
-      "dueDate": "12/04/2023",
-      "dueTime": "00:45",
-      "description": "",
-      "important": true,
-      "completed": true,
-      "id": 8
-    },
-    {
-      "taskTitle": "hello",
-      "dueDate": "20/04/2023",
-      "dueTime": "00:45",
-      "description": "",
+      "taskTitle": "Send thank you note",
+      "dueDate": "27/05/2023",
+      "dueTime": "15:00",
+      "description": "Express appreciation for gift",
       "important": false,
-      "completed": true,
-      "id": 9
-    },
-    {
-      "taskTitle": "hello",
-      "dueDate": "13/04/2023",
-      "dueTime": "00:45",
-      "description": "",
       "completed": false,
+      "id": 8,
+      "listName": "/personal"
+    },
+    {
+      "taskTitle": "Prepare for presentation",
+      "dueDate": "30/05/2023",
+      "dueTime": "09:00",
+      "description": "Create slides and rehearse talk",
+      "important": true,
+      "completed": false,
+      "id": 9,
+      "listName": "/work"
+    },
+    {
+      "taskTitle": "Read book",
+      "dueDate": "01/06/2023",
+      "dueTime": "20:00",
+      "description": "Crime and Punishment by Fyodor Dostoevsky",
       "important": false,
-      "listName": "/sundar",
-      "id": 10
+      "completed": false,
+      "id": 10,
+      "listName": "/personal"
+    },
+    {
+      "taskTitle": "Check-upP",
+      "dueDate": "29/04/2055",
+      "dueTime": "09:00",
+      "description": "Go for reggular checkupp\n",
+      "important": true,
+      "listName": "/health",
+      "id": 11
+    },
+    {
+      "taskTitle": "call brother",
+      "dueDate": "19/04/2023",
+      "dueTime": "12:45",
+      "description": "ask him somthing",
+      "important": false,
+      "completed": true,
+      "id": 12,
+      "listName": "/family"
     }
   ],
   "listNames": [
@@ -81,19 +124,39 @@
       "path": "/"
     },
     {
-      "label": "work",
+      "label": "Work",
       "path": "/work",
       "id": 2
     },
     {
-      "label": "sundar",
-      "path": "/sundar",
+      "label": "Personal work",
+      "path": "/personal",
       "id": 3
+    },
+    {
+      "label": "Learning",
+      "path": "/learning",
+      "id": 4
+    },
+    {
+      "label": "Family",
+      "path": "/family",
+      "id": 5
+    },
+    {
+      "label": "Exercise",
+      "path": "/exercise",
+      "id": 6
+    },
+    {
+      "label": "Health",
+      "path": "/health",
+      "id": 7
     },
     {
       "label": "All Tasks",
       "path": "/all",
-      "id": 4
+      "id": 8
     }
   ]
 }

@@ -6,10 +6,11 @@ import "react-datetime/css/react-datetime.css";
 import moment from "moment";
 import "./CreateTask.scss";
 import { CgMathPlus } from "react-icons/cg";
-import useTasksContext from "../../hooks/use-task-context";
+import { addTask } from "../../store";
 import TimePicker from "./TimePicker.js";
 import { convertTo24HourFormat } from "../../utils/commonFunctions";
 import useNavigation from "../../hooks/useNavigation";
+import { useThunk } from "../../hooks/use-thunk";
 
 function CreateTask({ showModel = false }) {
   const [show, setShow] = useState(false);
@@ -24,7 +25,7 @@ function CreateTask({ showModel = false }) {
     dueTime: "",
   });
   const [isClicked, setIsClicked] = useState(false);
-  const { createTask } = useTasksContext();
+  const [doAddTask, isAddingTask] = useThunk(addTask);
   const [timeEntered, setTimeEntered] = useState("");
   const { currentPath } = useNavigation();
 
@@ -39,7 +40,7 @@ function CreateTask({ showModel = false }) {
     setImportant(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errors = {};
 
@@ -78,7 +79,7 @@ function CreateTask({ showModel = false }) {
     const dueTime24hr = convertTo24HourFormat({ time: dueTime });
 
     if (Object.keys(errors).length === 0) {
-      createTask({
+      await doAddTask({
         taskTitle,
         dueDate,
         dueTime: dueTime24hr,
@@ -86,6 +87,7 @@ function CreateTask({ showModel = false }) {
         important,
         listName: currentPath,
       });
+
       handleClose();
     } else {
       setErrors(errors);
@@ -156,7 +158,7 @@ function CreateTask({ showModel = false }) {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Add New Task</Modal.Title>
+          <Modal.Title>Adding new task</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={handleSubmit}>

@@ -17,7 +17,6 @@ export const convertTo24HourFormat = ({ time }) => {
   const hoursFormatted = hours.toString().padStart(2, "0");
   const minutesFormatted = minutes.toString().padStart(2, "0");
 
-  console.log(`${hoursFormatted}:${minutesFormatted}`);
   return `${hoursFormatted}:${minutesFormatted}`;
 };
 

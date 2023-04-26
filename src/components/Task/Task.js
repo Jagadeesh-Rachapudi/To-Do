@@ -7,11 +7,13 @@ import Card from "react-bootstrap/Card";
 import Notification from "../Notification/Notification";
 import formatDate from "../../utils/DateFormater";
 import DateTimeMatcher from "../../utils/DateTimeMatcher";
-import useTasksContext from "../../hooks/use-task-context";
 import Confetti from "react-confetti";
 import { RxCross1 } from "react-icons/rx";
 import EditTask from "../EditTask/EditTask.js";
 import { pageHeight } from "../../utils/commonFunctions";
+import { editTaskbyId } from "../../store/thunks/editTask";
+import { deleteTask } from "../../store";
+import { useThunk } from "../../hooks/use-thunk";
 
 const Task = ({
   id,
@@ -21,41 +23,48 @@ const Task = ({
   description,
   completed,
   important,
+  listName,
 }) => {
   const [hoveredStar, setHoveredStar] = useState(false);
   const [hoveredCheck, setHoveredCheck] = useState(false);
   const [formattedDueDate, setFromatedDueDate] = useState(formatDate(dueDate));
-  const [taskDoneNow, settaskDoneNow] = useState(false);
-  const { editTaskbyId, deleteTaskById } = useTasksContext();
+  const [doEditTask] = useThunk(editTaskbyId);
+  const [doDeleteTask] = useThunk(deleteTask);
   const [pieces, setPieces] = useState(500);
   const [onEdit, setOnEdit] = useState(false);
+  const [taskDoneNow, setTaskDoneNow] = useState(false);
 
   const handleImportantChange = () => {
-    console.log("before", important);
-    editTaskbyId(id, {
-      taskTitle,
-      dueDate,
-      dueTime,
-      description,
-      completed,
-      important: !important,
+    doEditTask({
+      id,
+      updatedTask: {
+        taskTitle,
+        dueDate,
+        dueTime,
+        description,
+        completed,
+        important: !important,
+        listName,
+      },
     });
-    console.log("after", important);
   };
 
-  const handleCompletedChange = () => {
-    settaskDoneNow(true);
+  const handleCompletedChange = async () => {
     if (!completed) {
       setPieces(500);
     }
-
-    editTaskbyId(id, {
-      taskTitle,
-      dueDate,
-      dueTime,
-      description,
-      important,
-      completed: !completed,
+    setTaskDoneNow(true);
+    doEditTask({
+      id,
+      updatedTask: {
+        taskTitle,
+        dueDate,
+        dueTime,
+        description,
+        important,
+        completed: !completed,
+        listName,
+      },
     });
   };
 
@@ -70,7 +79,7 @@ const Task = ({
   }, [taskDoneNow, pieces]);
 
   const handleDeleteTask = () => {
-    deleteTaskById(id);
+    doDeleteTask(id);
   };
 
   const handleEditTask = (task) => {
@@ -90,6 +99,11 @@ const Task = ({
   const showNotification = DateTimeMatcher({ dueDate, dueTime });
   return (
     <div>
+      {taskDoneNow === true ? (
+        <>
+          <Confetti gravity={0.2} numberOfPieces={pieces} height={pageHeight} />
+        </>
+      ) : null}
       <Card className="task ">
         <RxCross1 className="text-xl cross me-3 " onClick={handleDeleteTask} />
         <div className="mt-auto">
@@ -100,28 +114,36 @@ const Task = ({
           {!completed && !hoveredCheck ? (
             <AiOutlineCheck
               className="not-completed ms-2 mb-1"
-              onClick={handleCompletedChange}
+              onClick={async () => {
+                await handleCompletedChange();
+              }}
               onMouseEnter={() => setHoveredCheck(true)}
               onMouseLeave={() => setHoveredCheck(false)}
             />
           ) : !completed && hoveredCheck ? (
             <VscCircleLargeFilled
               className="not-completed ms-2 mb-1"
-              onClick={handleCompletedChange}
+              onClick={async () => {
+                await handleCompletedChange();
+              }}
               onMouseEnter={() => setHoveredCheck(true)}
               onMouseLeave={() => setHoveredCheck(false)}
             />
           ) : completed && hoveredCheck ? (
             <AiOutlineCheck
               className="completed ms-2 mb-1"
-              onClick={handleCompletedChange}
+              onClick={async () => {
+                await handleCompletedChange();
+              }}
               onMouseEnter={() => setHoveredCheck(true)}
               onMouseLeave={() => setHoveredCheck(false)}
             />
           ) : (
             <VscCircleLargeFilled
               className="completed ms-2 mb-1"
-              onClick={handleCompletedChange}
+              onClick={async () => {
+                await handleCompletedChange();
+              }}
               onMouseEnter={() => setHoveredCheck(true)}
               onMouseLeave={() => setHoveredCheck(false)}
             />
@@ -190,10 +212,6 @@ const Task = ({
           showNoti={showNotification}
         />
       )}
-      {taskDoneNow ? (
-        <Confetti gravity={0.2} numberOfPieces={pieces} height={pageHeight} />
-      ) : null}
-
       {editComponent}
     </div>
   );
