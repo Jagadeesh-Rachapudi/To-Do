@@ -10,7 +10,7 @@ function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowError(true);
+    console.log(email, name, password);
   };
 
   return (
@@ -31,10 +31,9 @@ function SignUp() {
               )}
               <Form.Group controlId="formBasicUsername">
                 <Form.Label>Name</Form.Label>
-
                 <Form.Control
-                  type="email"
-                  value={email}
+                  type="name"
+                  value={name}
                   placeholder="Enter name"
                   onChange={(e) => setName(e.target.value)}
                   autocomplete="off"
@@ -43,8 +42,8 @@ function SignUp() {
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
                 <Form.Control
-                  type="name"
-                  value={name}
+                  type="email"
+                  value={email}
                   placeholder="Enter mail"
                   onChange={(e) => setEmail(e.target.value)}
                   autocomplete="off"
