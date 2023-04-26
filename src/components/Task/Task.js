@@ -23,7 +23,7 @@ const Task = ({
   description,
   completed,
   important,
-  listName,
+  listID,
 }) => {
   const [hoveredStar, setHoveredStar] = useState(false);
   const [hoveredCheck, setHoveredCheck] = useState(false);
@@ -44,7 +44,7 @@ const Task = ({
         description,
         completed,
         important: !important,
-        listName,
+        listID,
       },
     });
   };
@@ -63,7 +63,7 @@ const Task = ({
         description,
         important,
         completed: !completed,
-        listName,
+        listID,
       },
     });
   };

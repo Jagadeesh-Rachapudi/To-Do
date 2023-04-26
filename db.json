@@ -7,7 +7,7 @@
       "description": "Milk, bread, eggs, butter",
       "important": false,
       "completed": true,
-      "listName": "/personal",
+      "listID": 3,
       "id": 1
     },
     {
@@ -17,8 +17,8 @@
       "description": "Vacuum, dust, mop floors",
       "important": true,
       "completed": false,
-      "id": 2,
-      "listName": "/personal"
+      "listID": 3,
+      "id": 2
     },
     {
       "taskTitle": "Finish project",
@@ -28,7 +28,7 @@
       "important": true,
       "completed": false,
       "id": 3,
-      "listName": "/work"
+      "listID": 2
     },
     {
       "taskTitle": "Study for exam",
@@ -37,7 +37,7 @@
       "description": "Review lecture notes and textbook",
       "important": false,
       "completed": true,
-      "listName": "/learning",
+      "listID": 4,
       "id": 4
     },
     {
@@ -47,7 +47,7 @@
       "description": "5 miles at moderate pace",
       "important": false,
       "completed": true,
-      "listName": "/exercise",
+      "listID": 6,
       "id": 5
     },
     {
@@ -56,7 +56,8 @@
       "dueTime": "12:00",
       "description": "Checkup and cleaning",
       "important": true,
-      "id": 6
+      "id": 6,
+      "listID": 7
     },
     {
       "taskTitle": "Call mom",
@@ -65,7 +66,8 @@
       "description": "Catch up on family news",
       "important": false,
       "completed": true,
-      "id": 7
+      "id": 7,
+      "listID": 5
     },
     {
       "taskTitle": "Send thank you note",
@@ -75,7 +77,7 @@
       "important": false,
       "completed": false,
       "id": 8,
-      "listName": "/personal"
+      "listID": 3
     },
     {
       "taskTitle": "Prepare for presentation",
@@ -85,7 +87,7 @@
       "important": true,
       "completed": false,
       "id": 9,
-      "listName": "/work"
+      "listID": 2
     },
     {
       "taskTitle": "Read book",
@@ -94,17 +96,16 @@
       "description": "Crime and Punishment by Fyodor Dostoevsky",
       "important": false,
       "completed": true,
-      "listName": "/personal",
+      "listID": 3,
       "id": 10
     },
     {
-      "taskTitle": "Check-upP",
+      "taskTitle": "Check-up",
       "dueDate": "29/04/2055",
       "dueTime": "09:00",
-      "description": "Go for reggular checkupp\n",
+      "description": "Go for reggular checkup",
       "important": true,
-      "listName": "/health",
-      "id": 11
+      "listID": 7
     },
     {
       "taskTitle": "call brother",
@@ -114,7 +115,7 @@
       "important": false,
       "completed": true,
       "id": 12,
-      "listName": "/family"
+      "listID": 5
     }
   ],
   "listNames": [

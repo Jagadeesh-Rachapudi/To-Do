@@ -60,7 +60,7 @@ function Topbar() {
         <button
           type="button"
           className={`btn btn-light mb-1 new-list-btn ${
-            listNamesData.length <= 7 ? "" : "disabled-btn"
+            listNamesData.length <= 77 ? "" : "disabled-btn"
           }`}
           onClick={() => setModalShow(true)}
         >
@@ -68,7 +68,7 @@ function Topbar() {
         </button>
       </div>
 
-      {listNamesData.length <= 7 ? (
+      {listNamesData.length <= 77 ? (
         <CreateNewList show={modalShow} onHide={() => setModalShow(false)} />
       ) : null}
       <div>

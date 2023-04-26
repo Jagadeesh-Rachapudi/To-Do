@@ -29,11 +29,11 @@ function App() {
   useEffect(() => {
     doFetchTasks();
     doFetchListNames();
-  }, [doFetchTasks]);
+  }, [doFetchTasks, doFetchListNames]);
 
   const renderRoutes = listNamesData.map((listName) => {
     let renderTasks =
-      listName.path === "/all"
+      listName.id === 8
         ? data.data.map(
             ({
               id,
@@ -43,7 +43,7 @@ function App() {
               description,
               completed,
               important,
-              listName,
+              listID,
             }) => (
               <div key={id}>
                 <Task
@@ -54,13 +54,13 @@ function App() {
                   description={description}
                   completed={completed}
                   important={important}
-                  listName={listName}
+                  listID={listID}
                 />
               </div>
             )
           )
         : data.data
-            .filter((task) => task.listName === listName.path)
+            .filter((task) => task.listID === listName.id)
             .map(
               ({
                 id,
@@ -70,7 +70,7 @@ function App() {
                 description,
                 completed,
                 important,
-                listName,
+                listID,
               }) => (
                 <div key={id}>
                   <Task
@@ -81,7 +81,7 @@ function App() {
                     description={description}
                     completed={completed}
                     important={important}
-                    listName={listName}
+                    listID={listID}
                   />
                 </div>
               )

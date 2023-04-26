@@ -3,7 +3,7 @@ import axios from "axios";
 
 const addTask = createAsyncThunk(
   "tasks/add",
-  async ({ taskTitle, dueDate, dueTime, description, important, listName }) => {
+  async ({ taskTitle, dueDate, dueTime, description, important, listID }) => {
     const response = await axios.post("http://localhost:3001/tasks", {
       taskTitle,
       dueDate,
@@ -11,9 +11,8 @@ const addTask = createAsyncThunk(
       description,
       completed: false,
       important,
-      listName,
+      listID: listID,
     });
-
     return response.data;
   }
 );

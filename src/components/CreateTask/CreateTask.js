@@ -11,6 +11,7 @@ import TimePicker from "./TimePicker.js";
 import { convertTo24HourFormat } from "../../utils/commonFunctions";
 import useNavigation from "../../hooks/useNavigation";
 import { useThunk } from "../../hooks/use-thunk";
+import { useSelector } from "react-redux";
 
 function CreateTask({ showModel = false }) {
   const [show, setShow] = useState(false);
@@ -28,6 +29,14 @@ function CreateTask({ showModel = false }) {
   const [doAddTask, isAddingTask] = useThunk(addTask);
   const [timeEntered, setTimeEntered] = useState("");
   const { currentPath } = useNavigation();
+
+  const { listNamesData } = useSelector((state) => {
+    return {
+      listNamesData: state.listNames.listNamesData,
+    };
+  });
+
+  const listId = listNamesData.find((item) => item.path === currentPath)?.id;
 
   const handleClose = () => {
     setIsClicked(!isClicked);
@@ -85,7 +94,7 @@ function CreateTask({ showModel = false }) {
         dueTime: dueTime24hr,
         description,
         important,
-        listName: currentPath,
+        listID: listId,
       });
 
       handleClose();

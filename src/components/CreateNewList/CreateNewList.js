@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import useListName from "../../hooks/use-listName-context";
+import { useThunk } from "../../hooks/use-thunk";
+import { createListName } from "../../store";
 
 function CreateNewList(props) {
   const [listName, setListName] = useState("");
   const [showWarning, setShowWarning] = useState(false);
-  const { createListName } = useListName();
   const [Label, setLabel] = useState("");
+  const [doCreateListName] = useThunk(createListName);
 
   const handleListNameChange = (event) => {
     setListName(event.target.value);
@@ -20,8 +21,12 @@ function CreateNewList(props) {
       setShowWarning(true);
     } else {
       props.onHide();
-      console.log(listName.split(" ")[0]);
-      createListName({
+      // createListName({
+      //   label: listName.split(" ")[0],
+      //   path: "/" + listName.split(" ")[0].toLocaleLowerCase(),
+      // });
+      console.log("hello");
+      doCreateListName({
         label: listName.split(" ")[0],
         path: "/" + listName.split(" ")[0].toLocaleLowerCase(),
       });
