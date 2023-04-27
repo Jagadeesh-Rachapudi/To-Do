@@ -3,29 +3,37 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useThunk } from "../../hooks/use-thunk";
 import { createListName } from "../../store";
-
+import { fetchListNames } from "../../store";
 function CreateNewList(props) {
   const [listName, setListName] = useState("");
   const [showWarning, setShowWarning] = useState(false);
   const [Label, setLabel] = useState("");
   const [doCreateListName] = useThunk(createListName);
+  const [dofetchListNames] = useThunk(fetchListNames);
 
   const handleListNameChange = (event) => {
     setListName(event.target.value);
     setShowWarning(false);
   };
 
-  const handleSubmit = (event) => {
+  const pause = (duration) => {
+    return new Promise((resolve) => {
+      setTimeout(resolve, duration);
+    });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!listName) {
       setShowWarning(true);
     } else {
       props.onHide();
-      console.log("hello");
       doCreateListName({
         label: listName.split(" ")[0],
         path: "/" + listName.split(" ")[0].toLocaleLowerCase(),
       });
+      await pause(500);
+      dofetchListNames();
       setListName("");
     }
   };

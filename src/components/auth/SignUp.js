@@ -17,9 +17,9 @@ function SignUp() {
     e.preventDefault();
     // console.log();
     doAddUser({
-      email: "hello!gmail.com",
-      name: "max",
-      password: "vax",
+      email: email,
+      name: name,
+      pswd: password,
     });
   };
 
