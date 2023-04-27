@@ -159,5 +159,35 @@
       "path": "/all",
       "id": 8
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "Jagadeesh@gmail.com",
+      "name": "Jagadeesh",
+      "pswd": "hello"
+    },
+    {
+      "email": "hello!gmail.com",
+      "name": "max",
+      "pswd": "vax",
+      "id": 2
+    },
+    {
+      "email": "hello!gmail.com",
+      "name": "max",
+      "pswd": "vax",
+      "id": 3
+    },
+    {
+      "email": "hello!gmail.com",
+      "name": "max",
+      "id": 4
+    },
+    {
+      "email": "hello!gmail.com",
+      "name": "max",
+      "id": 5
+    }
   ]
 }

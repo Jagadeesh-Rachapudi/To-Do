@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import { useThunk } from "../../hooks/use-thunk";
+import { addUser } from "../../store";
+import { useDispatch } from "react-redux";
 
 function SignUp() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [showError, setShowError] = useState(false);
+  const [doAddUser] = useThunk(addUser);
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, name, password);
+    // console.log();
+    doAddUser({
+      email: "hello!gmail.com",
+      name: "max",
+      password: "vax",
+    });
   };
 
   return (
