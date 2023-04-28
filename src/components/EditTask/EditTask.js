@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Datetime from "react-datetime";
@@ -29,6 +29,7 @@ function EditTask({ showModel = false, taskID }) {
   });
   const [isClicked, setIsClicked] = useState(false);
   const [timeEntered, setTimeEntered] = useState("");
+  const [listID, setListID] = useState(-1);
   const dispatch = useDispatch();
 
   const { isLoading, data, error } = useSelector((state) => {
@@ -84,7 +85,7 @@ function EditTask({ showModel = false, taskID }) {
             dueTime: dueTime24hr,
             description: description,
             important: important,
-            listName,
+            listID: listID,
           },
         })
       );
@@ -153,6 +154,7 @@ function EditTask({ showModel = false, taskID }) {
     setDescription(task.description);
     setImportant(task.important);
     setlistName(task.listName);
+    setListID(task.listID);
   }, []);
 
   return (

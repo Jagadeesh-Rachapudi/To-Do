@@ -11,7 +11,7 @@ function DateTimeMatcher({ dueDate, dueTime }) {
   const nowTime = now.toFormat("HH:mm");
   const formatedDueDate = dueDateTime.toFormat("dd/MM/yyyy");
   const formatedDueTime = dueDateTime.toFormat("HH:mm");
-//   console.log(nowTime === dueTime, nowTime, dueTime);
+  // console.log(nowTime === dueTime, nowTime, dueTime);
   return nowDate == formatedDueDate && nowTime == formatedDueTime;
 }
 

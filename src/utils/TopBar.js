@@ -72,14 +72,14 @@ function Topbar() {
         <CreateNewList show={modalShow} onHide={() => setModalShow(false)} />
       ) : null}
       <div>
-        {/* <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>All Lists</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <div className="menu-flex-grow">{renderedLinks}</div>
           </Offcanvas.Body>
-        </Offcanvas> */}
+        </Offcanvas>
       </div>
     </div>
   );

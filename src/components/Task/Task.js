@@ -33,6 +33,7 @@ const Task = ({
   const [pieces, setPieces] = useState(500);
   const [onEdit, setOnEdit] = useState(false);
   const [taskDoneNow, setTaskDoneNow] = useState(false);
+  const [time, setTime] = useState(new Date());
 
   const handleImportantChange = () => {
     doEditTask({
@@ -91,6 +92,14 @@ const Task = ({
       <EditTask showModel={true} taskID={id} />
     </>
   ) : null;
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(new Date());
+    }, 60000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   useEffect(() => {
     setFromatedDueDate(formatDate(dueDate));
