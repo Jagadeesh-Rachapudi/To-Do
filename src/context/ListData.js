@@ -17,37 +17,9 @@ function ListNameProvider({ children }) {
       path,
     });
 
-    console.log(response);
     const updatedListNames = [...listNames, response.data];
     setListNames(updatedListNames);
   };
-
-  //   const editbyId = async (id, updatedTask) => {
-  //     const response = await axios.put(`http://localhost:3001/data/${id}`, {
-  //       ...updatedTask,
-  //     });
-  //     const updatedData = data.map((task) => {
-  //       if (task.id === id) {
-  //         return { ...task, ...response.data };
-  //       }
-
-  //       return task;
-  //     });
-
-  //     console.log(response.data);
-
-  //     setData(updatedData);
-  //   };
-
-  //   const deleteTaskById = async (id) => {
-  //     await axios.delete(`http://localhost:3001/data/${id}`);
-
-  //     const updatedData = data.filter((task) => {
-  //       return task.id !== id;
-  //     });
-
-  //     setData(updatedData);
-  //   };
 
   const getListNamebById = (Id) =>
     listNames.find((listName) => listName.id === Id);

@@ -9,12 +9,11 @@
       "id": 3
     },
     {
-      "taskTitle": "Study for exam",
+      "taskTitle": "Study for exam now",
       "dueDate": "10/05/2023",
       "dueTime": "18:00",
       "description": "Review lecture notes and textbook",
-      "important": false,
-      "completed": true,
+      "important": true,
       "listID": 4,
       "id": 4
     },
@@ -93,6 +92,16 @@
       "important": false,
       "listID": 7,
       "id": 13
+    },
+    {
+      "taskTitle": "start homework",
+      "dueDate": "20/04/2023",
+      "dueTime": "00:45",
+      "description": "",
+      "completed": false,
+      "important": false,
+      "listID": 4,
+      "id": 14
     }
   ],
   "listNames": [

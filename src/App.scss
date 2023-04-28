@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  .task-crad {
+    @media (max-width: 432px) {
+      max-width: 95% !important;
+    }
+  }
 }
 
 .App-logo {

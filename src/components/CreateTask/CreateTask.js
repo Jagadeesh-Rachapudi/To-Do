@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Datetime from "react-datetime";
@@ -29,7 +29,6 @@ function CreateTask({ showModel = false }) {
   const [doAddTask, isAddingTask] = useThunk(addTask);
   const [timeEntered, setTimeEntered] = useState("");
   const { currentPath } = useNavigation();
-  const taskTitleRef = useRef(null);
 
   const { listNamesData } = useSelector((state) => {
     return {
@@ -153,6 +152,7 @@ function CreateTask({ showModel = false }) {
     setImportant(!important);
   };
 
+
   return (
     <>
       <button
@@ -187,7 +187,6 @@ function CreateTask({ showModel = false }) {
                 name="taskTitle"
                 onChange={handleInputChange}
                 autocomplete="off"
-                ref={taskTitleRef}
               />
               {errors.taskTitle && !taskTitle && (
                 <p className="text-danger">{errors.taskTitle}</p>

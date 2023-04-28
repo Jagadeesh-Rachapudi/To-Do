@@ -5,7 +5,6 @@ import "./utils.scss";
 function Link({ to, children, className, activeClassName }) {
   const { navigate, currentPath } = useNavigation();
 
-  // console.log(to, currentPath);
   const classes = classNames(
     "text-stone-700",
     "no-underline font-medium pb-1",

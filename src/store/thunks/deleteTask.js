@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const deleteTask = createAsyncThunk("tasks/deleteTask", async (id) => {
-  await axios.delete(`http://localhost:3001/tasks/${id}`);
+  await axios.delete(`${process.env.REACT_APP_CONTENT_LINK}/${id}`);
 
   await pause(400);
 

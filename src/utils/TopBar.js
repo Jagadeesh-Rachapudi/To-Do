@@ -55,22 +55,15 @@ function Topbar() {
           }}
           onClick={handleShow}
         >
-          <AiOutlineMenu />
+          <div className="d-flex">
+            <div className="mt-1 me-1">
+              <AiOutlineMenu />
+            </div>{" "}
+            {"Menu"}
+          </div>
         </button>
-        {/* <button
-          type="button"
-          className={`btn btn-light mb-1 new-list-btn ${
-            listNamesData.length <= 77 ? "" : "disabled-btn"
-          }`}
-          onClick={() => setModalShow(true)}
-        >
-          New List
-        </button> */}
       </div>
 
-      {listNamesData.length <= 77 ? (
-        <CreateNewList show={modalShow} onHide={() => setModalShow(false)} />
-      ) : null}
       <div>
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>

@@ -2,11 +2,9 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const fetchTasks = createAsyncThunk("tasks/fetch", async () => {
-  const response = await axios.get("http://localhost:3001/tasks");
-
-  // DEV ONLY!!!
-  // await pause(1000);
-
+  const response = await axios.get(
+    `${process.env.REACT_APP_CONTENT_LINK}/tasks`
+  );
   return response.data;
 });
 

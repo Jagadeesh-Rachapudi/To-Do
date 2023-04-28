@@ -75,7 +75,6 @@ function EditTask({ showModel = false, taskID }) {
     const dueTime24hr = convertTo24HourFormat({ time: dueTime });
 
     if (Object.keys(errors).length === 0) {
-      console.log(taskID);
       dispatch(
         editTaskbyId({
           id: taskID,
@@ -172,7 +171,6 @@ function EditTask({ showModel = false, taskID }) {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              console.log("Sun");
             }}
           >
             <div className="mb-3">

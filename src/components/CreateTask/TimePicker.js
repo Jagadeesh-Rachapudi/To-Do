@@ -6,7 +6,6 @@ function TimePicker({ name, value, onChange, className, timeFormat, ...rest }) {
   const handleChange = (e) => {
     setInput(e.target.value);
     onChange(e.target.value);
-    // console.log(e.target.value);
   };
 
   return (

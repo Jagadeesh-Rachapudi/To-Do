@@ -54,7 +54,7 @@ function App() {
               important,
               listID,
             }) => (
-              <div key={id}>
+              <div key={id} className="task-crad" >
                 <Task
                   id={id}
                   taskTitle={taskTitle}
@@ -81,7 +81,7 @@ function App() {
                 important,
                 listID,
               }) => (
-                <div key={id}>
+                <div key={id} className="task-crad" >
                   <Task
                     id={id}
                     taskTitle={taskTitle}
@@ -95,8 +95,6 @@ function App() {
                 </div>
               )
             );
-
-    console.log(renderTasks);
     {
       return (
         <Route path={listName.path}>
@@ -126,7 +124,7 @@ function App() {
       </div>
     );
   } else if (error) {
-    content = <div> {console.log(error)} Error</div>;
+    content = <div>  Error</div>;
   } else {
     content = <div className="col-span-5">{renderRoutes}</div>;
   }
