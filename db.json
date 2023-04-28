@@ -16,19 +16,17 @@
       "dueTime": "14:00",
       "description": "Vacuum, dust, mop floors",
       "important": true,
-      "completed": false,
+      "completed": true,
       "listID": 3,
       "id": 2
     },
     {
       "taskTitle": "Finish project",
-      "dueDate": "05/05/2023",
-      "dueTime": "16:00",
+      "dueDate": "28/04/2023",
+      "dueTime": "12:07",
       "description": "Complete coding and testing",
       "important": true,
-      "completed": false,
-      "id": 3,
-      "listID": 2
+      "id": 3
     },
     {
       "taskTitle": "Study for exam",
@@ -75,9 +73,9 @@
       "dueTime": "15:00",
       "description": "Express appreciation for gift",
       "important": false,
-      "completed": false,
-      "id": 8,
-      "listID": 3
+      "completed": true,
+      "listID": 3,
+      "id": 8
     },
     {
       "taskTitle": "Prepare for presentation",
@@ -85,9 +83,9 @@
       "dueTime": "09:00",
       "description": "Create slides and rehearse talk",
       "important": true,
-      "completed": false,
-      "id": 9,
-      "listID": 2
+      "completed": true,
+      "listID": 2,
+      "id": 9
     },
     {
       "taskTitle": "Read book",

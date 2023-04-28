@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Route from "./utils/Route";
 import Topbar from "./utils/TopBar";
 import Home from "./Pages/Home";
-import useListName from "./hooks/use-listName-context";
 import CreateTask from "./components/CreateTask/CreateTask";
 import TaskList from "./components/TaskList/TaskList";
 import Task from "./components/Task/Task";
@@ -11,11 +10,8 @@ import useNavigation from "./hooks/useNavigation";
 import { fetchTasks } from "./store";
 import { useSelector } from "react-redux";
 import { useThunk } from "./hooks/use-thunk";
-import { fetchListNames } from "./store";
 import TaskSkeleton from "./components/Task/TaskSkeleton";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
-import Login from "./components/auth/Login";
-import SignUp from "./components/auth/SignUp";
+import { fetchListNames } from "./store";
 
 function App() {
   const { currentPath } = useNavigation();
@@ -27,9 +23,14 @@ function App() {
     setIsFlipped(!isFlipped);
   };
 
-  const { data, listNamesData } = useSelector((state) => {
+  const { data } = useSelector((state) => {
     return {
       data: state.tasks,
+    };
+  });
+
+  const { listNamesData } = useSelector((state) => {
+    return {
       listNamesData: state.listNames.listNamesData,
     };
   });
@@ -120,45 +121,8 @@ function App() {
     <div className="App">
       <Topbar />
       {content}
-      {currentPath === "/home" ? <Home /> : null}
+      {currentPath === "/" ? <Home /> : null}
       {currentPath !== "/all" && currentPath !== "/" ? <CreateTask /> : null}
-
-      {currentPath === "/" ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            minHeight: "92vh",
-          }}
-        >
-          <Flippy
-            flipOnClick={false}
-            isFlipped={isFlipped}
-            flipDirection="horizontal"
-            className="flippy-box rounded"
-          >
-            <FrontSide>
-              <Login />
-              <p
-                className="text-right me-3 cursor-pointer signup-link hover:text-blue-500"
-                onClick={flipCard}
-              >
-                Sign up
-              </p>
-            </FrontSide>
-            <BackSide>
-              <SignUp />
-              <p
-                className="text-right me-3 cursor-pointer signup-link hover:text-blue-500"
-                onClick={flipCard}
-              >
-                Login
-              </p>
-            </BackSide>
-          </Flippy>
-        </div>
-      ) : null}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { DateTime } from "luxon";
 
 function formatDate(
-  dateString,
+  dateString = "31/12/2099",
   inputFormat = "dd/MM/yyyy",
   outputFormat = "MMM dd yy"
 ) {

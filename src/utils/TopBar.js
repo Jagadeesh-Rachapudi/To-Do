@@ -57,7 +57,7 @@ function Topbar() {
         >
           <AiOutlineMenu />
         </button>
-        <button
+        {/* <button
           type="button"
           className={`btn btn-light mb-1 new-list-btn ${
             listNamesData.length <= 77 ? "" : "disabled-btn"
@@ -65,21 +65,21 @@ function Topbar() {
           onClick={() => setModalShow(true)}
         >
           New List
-        </button>
+        </button> */}
       </div>
 
       {listNamesData.length <= 77 ? (
         <CreateNewList show={modalShow} onHide={() => setModalShow(false)} />
       ) : null}
       <div>
-        <Offcanvas show={show} onHide={handleClose}>
+        {/* <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>All Lists</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <div className="menu-flex-grow">{renderedLinks}</div>
           </Offcanvas.Body>
-        </Offcanvas>
+        </Offcanvas> */}
       </div>
     </div>
   );
