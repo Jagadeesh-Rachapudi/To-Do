@@ -58,16 +58,6 @@
       "id": 8
     },
     {
-      "taskTitle": "Prepare for presentation",
-      "dueDate": "30/05/2023",
-      "dueTime": "09:00",
-      "description": "Create slides and rehearse talk",
-      "important": true,
-      "completed": true,
-      "listID": 2,
-      "id": 9
-    },
-    {
       "taskTitle": "Read book",
       "dueDate": "01/06/2023",
       "dueTime": "20:00",
@@ -109,7 +99,7 @@
     {
       "id": 1,
       "label": "Home",
-      "path": "/home"
+      "path": "/"
     },
     {
       "label": "Work",

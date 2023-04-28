@@ -96,11 +96,25 @@ function App() {
               )
             );
 
-    return (
-      <Route path={listName.path}>
-        <TaskList renderTasks={renderTasks} />
-      </Route>
-    );
+    console.log(renderTasks);
+    {
+      return (
+        <Route path={listName.path}>
+          {renderTasks.length > 0 ? (
+            <TaskList renderTasks={renderTasks} />
+          ) : (
+            currentPath !== "/" && (
+              <div>
+                <div className="intro">
+                  <h1>No tasks yet !!!</h1>
+                  <p>Click on plus button below to create a task</p>
+                </div>
+              </div>
+            )
+          )}
+        </Route>
+      );
+    }
   });
 
   let content = <></>;
