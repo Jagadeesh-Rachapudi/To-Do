@@ -2,7 +2,6 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Link from "./Link";
 import "./utils.scss";
-import CreateNewList from "../components/CreateNewList/CreateNewList";
 import useListName from "../hooks/use-listName-context";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useSelector } from "react-redux";
@@ -11,8 +10,6 @@ function Topbar() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const [modalShow, setModalShow] = useState(false);
 
   const { listNamesData } = useSelector((state) => {
     return {
@@ -23,8 +20,9 @@ function Topbar() {
   const renderedLinks = listNamesData.map((listName) => {
     return (
       <Link
-        key={listName.label}
         to={listName.path}
+        key={listName.label}
+        handleClose={handleClose}
         className="link mb-3"
         activeClassName="active"
       >

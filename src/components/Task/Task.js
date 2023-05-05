@@ -111,7 +111,7 @@ const Task = ({
 
   const showNotification = DateTimeMatcher({ dueDate, dueTime });
   return (
-    <div className="task-crad">
+    <div className="task-crad p-2">
       {taskDoneNow === true ? (
         <>
           <Confetti gravity={0.2} numberOfPieces={pieces} height={pageHeight} />

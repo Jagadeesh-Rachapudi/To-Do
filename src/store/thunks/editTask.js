@@ -10,19 +10,8 @@ const editTaskbyId = createAsyncThunk(
         ...updatedTask,
       }
     );
-
-    console.log("hello");
-    // await pause(400);
-
     return response.data;
   }
 );
-
-// DEV ONLY!!!
-const pause = (duration) => {
-  return new Promise((resolve) => {
-    setTimeout(resolve, duration);
-  });
-};
 
 export { editTaskbyId };

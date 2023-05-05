@@ -54,7 +54,7 @@ function App() {
               important,
               listID,
             }) => (
-              <div key={id} className="task-crad" >
+              <div key={id} className="task-crad">
                 <Task
                   id={id}
                   taskTitle={taskTitle}
@@ -81,7 +81,7 @@ function App() {
                 important,
                 listID,
               }) => (
-                <div key={id} className="task-crad" >
+                <div key={id} className="task-crad">
                   <Task
                     id={id}
                     taskTitle={taskTitle}

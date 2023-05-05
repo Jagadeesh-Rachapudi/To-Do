@@ -2,7 +2,7 @@ import classNames from "classnames";
 import useNavigation from "../hooks/useNavigation";
 import "./utils.scss";
 
-function Link({ to, children, className, activeClassName }) {
+function Link({ to, children, className, activeClassName, handleClose }) {
   const { navigate, currentPath } = useNavigation();
 
   const classes = classNames(
@@ -17,7 +17,7 @@ function Link({ to, children, className, activeClassName }) {
       return;
     }
     event.preventDefault();
-
+    handleClose();
     navigate(to);
   };
 

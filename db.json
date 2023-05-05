@@ -6,16 +6,8 @@
       "dueTime": "12:13",
       "description": "Complete coding and testing",
       "important": true,
+      "completed": true,
       "id": 3
-    },
-    {
-      "taskTitle": "Study for exam now",
-      "dueDate": "10/05/2023",
-      "dueTime": "18:00",
-      "description": "Review lecture notes and textbook",
-      "important": true,
-      "listID": 4,
-      "id": 4
     },
     {
       "taskTitle": "Go for a run",
@@ -47,13 +39,13 @@
       "listID": 5
     },
     {
-      "taskTitle": "Send thank you note",
-      "dueDate": "27/05/2023",
-      "dueTime": "15:00",
-      "description": "Express appreciation for gift",
-      "completed": true,
+      "taskTitle": "Check-up",
+      "dueDate": "29/04/2055",
+      "dueTime": "09:00",
+      "description": "Go for reggular checkup",
       "important": true,
-      "listID": 3,
+      "completed": true,
+      "listID": 7,
       "id": 8
     },
     {
@@ -62,7 +54,9 @@
       "dueTime": "09:00",
       "description": "Go for reggular checkup",
       "important": true,
-      "listID": 7
+      "completed": false,
+      "listID": 7,
+      "id": 100
     },
     {
       "taskTitle": "call brother",
@@ -142,52 +136,6 @@
     {
       "label": "All Tasks",
       "path": "/all",
-      "id": 8
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "email": "Jagadeesh@gmail.com",
-      "name": "Jagadeesh",
-      "pswd": "hello"
-    },
-    {
-      "email": "hello!gmail.com",
-      "name": "max",
-      "pswd": "vax",
-      "id": 2
-    },
-    {
-      "email": "hello!gmail.com",
-      "name": "max",
-      "pswd": "vax",
-      "id": 3
-    },
-    {
-      "email": "hello!gmail.com",
-      "name": "max",
-      "id": 4
-    },
-    {
-      "email": "hello!gmail.com",
-      "name": "max",
-      "id": 5
-    },
-    {
-      "email": "hello!gmail.com",
-      "name": "max",
-      "id": 6
-    },
-    {
-      "email": "hello!gmail.com",
-      "name": "max",
-      "id": 7
-    },
-    {
-      "email": "s@gmail.com",
-      "name": "sundar",
-      "pswd": "11222",
       "id": 8
     }
   ]
