@@ -37,7 +37,7 @@ export let pageHeight = Math.max(
   document.documentElement.offsetHeight,
   document.body.clientHeight,
   document.documentElement.clientHeight,
-  1000000
+  
 );
 
 export const hashPswd = () => {
