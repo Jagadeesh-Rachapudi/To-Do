@@ -14,7 +14,7 @@ import {
 import { editTaskbyId } from "../../store";
 import { useSelector } from "react-redux";
 
-function EditTask({ showModel = false, taskID }) {
+function EditTask({ showModel = false, taskID, handleSetFalse }) {
   const [show, setShow] = useState(showModel);
   const [important, setImportant] = useState(false);
   const [taskTitle, setTaskTitle] = useState("");
@@ -103,6 +103,7 @@ function EditTask({ showModel = false, taskID }) {
     setDescription("");
     setErrors({});
     setImportant(false);
+    handleSetFalse();
   };
 
   const handleInputChange = (event) => {

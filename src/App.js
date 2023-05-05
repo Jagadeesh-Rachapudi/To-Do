@@ -124,7 +124,7 @@ function App() {
       </div>
     );
   } else if (error) {
-    content = <div>  Error</div>;
+    content = <div> {console.log(error)} Error</div>;
   } else {
     content = <div className="col-span-5">{renderRoutes}</div>;
   }

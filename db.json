@@ -51,20 +51,10 @@
       "dueDate": "27/05/2023",
       "dueTime": "15:00",
       "description": "Express appreciation for gift",
-      "important": false,
       "completed": true,
+      "important": true,
       "listID": 3,
       "id": 8
-    },
-    {
-      "taskTitle": "Read book",
-      "dueDate": "01/06/2023",
-      "dueTime": "20:00",
-      "description": "Crime and Punishment by Fyodor Dostoevsky",
-      "important": false,
-      "completed": true,
-      "listID": 3,
-      "id": 10
     },
     {
       "taskTitle": "Check-up",
@@ -98,10 +88,19 @@
       "dueDate": "20/04/2023",
       "dueTime": "00:45",
       "description": "",
-      "completed": false,
-      "important": false,
+      "completed": true,
+      "important": true,
       "listID": 4,
       "id": 14
+    },
+    {
+      "taskTitle": "test now",
+      "dueDate": "18/05/2025",
+      "dueTime": "13:45",
+      "description": "hello max\n",
+      "important": true,
+      "listID": 2,
+      "id": 15
     }
   ],
   "listNames": [

@@ -5,13 +5,14 @@ const editTaskbyId = createAsyncThunk(
   "tasks/update",
   async ({ id, updatedTask }) => {
     const response = await axios.put(
-      `${process.env.REACT_APP_CONTENT_LINK}/${id}`,
+      `${process.env.REACT_APP_CONTENT_LINK}/tasks/${id}`,
       {
         ...updatedTask,
       }
     );
 
-    await pause(400);
+    console.log("hello");
+    // await pause(400);
 
     return response.data;
   }

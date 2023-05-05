@@ -87,9 +87,13 @@ const Task = ({
     setOnEdit(true);
   };
 
+  const handleSetFalse = () => {
+    setOnEdit(false);
+  };
+
   const editComponent = onEdit ? (
     <>
-      <EditTask showModel={true} taskID={id} />
+      <EditTask showModel={true} taskID={id} handleSetFalse={handleSetFalse} />
     </>
   ) : null;
 
@@ -107,7 +111,7 @@ const Task = ({
 
   const showNotification = DateTimeMatcher({ dueDate, dueTime });
   return (
-    <div className="task-crad" >
+    <div className="task-crad">
       {taskDoneNow === true ? (
         <>
           <Confetti gravity={0.2} numberOfPieces={pieces} height={pageHeight} />
