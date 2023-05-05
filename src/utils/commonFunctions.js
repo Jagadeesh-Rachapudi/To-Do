@@ -1,4 +1,3 @@
-
 export const convertTo24HourFormat = ({ time }) => {
   const [timeStr, meridiem] = time.split(" ");
   const [hoursStr, minutesStr] = timeStr.split(":");
@@ -37,7 +36,8 @@ export let pageHeight = Math.max(
   document.body.offsetHeight,
   document.documentElement.offsetHeight,
   document.body.clientHeight,
-  document.documentElement.clientHeight
+  document.documentElement.clientHeight,
+  1000000
 );
 
 export const hashPswd = () => {

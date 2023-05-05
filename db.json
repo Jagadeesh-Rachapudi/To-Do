@@ -7,94 +7,390 @@
       "description": "Complete coding and testing",
       "important": true,
       "completed": true,
-      "id": 3
+      "id": 1,
+      "listID": 4
     },
+
     {
-      "taskTitle": "Go for a run",
-      "dueDate": "15/05/2023",
-      "dueTime": "08:00",
-      "description": "5 miles at moderate pace",
-      "important": false,
-      "completed": true,
-      "listID": 6,
-      "id": 5
-    },
-    {
-      "taskTitle": "Visit dentis",
-      "dueDate": "20/05/2023",
-      "dueTime": "12:00",
-      "description": "Checkup and cleaning",
+      "taskTitle": "Call client for feedback",
+      "dueDate": "07/05/2023",
+      "dueTime": "15:30",
+      "description": "Follow up on recent project work",
       "important": true,
+      "completed": false,
+      "id": 2,
+      "listID": 2
+    },
+    {
+      "taskTitle": "Go for a jog",
+      "dueDate": "08/05/2023",
+      "dueTime": "06:00",
+      "description": "Morning exercise routine",
+      "important": false,
+      "completed": false,
+      "id": 3,
+      "listID": 6
+    },
+    {
+      "taskTitle": "Finish reading book",
+      "dueDate": "09/05/2023",
+      "dueTime": "21:00",
+      "description": "Last few chapters left to read",
+      "important": true,
+      "completed": false,
+      "id": 4,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Buy groceries",
+      "dueDate": "10/05/2023",
+      "dueTime": "16:00",
+      "description": "Milk, eggs, bread, and vegetables",
+      "important": false,
+      "completed": false,
+      "id": 5,
+      "listID": 5
+    },
+    {
+      "taskTitle": "Attend online workshop",
+      "dueDate": "12/05/2023",
+      "dueTime": "09:00",
+      "description": "Topic: Introduction to Machine Learning",
+      "important": true,
+      "completed": false,
       "id": 6,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Schedule dental checkup",
+      "dueDate": "13/05/2023",
+      "dueTime": "14:00",
+      "description": "Routine teeth cleaning and checkup",
+      "important": true,
+      "completed": false,
+      "id": 7,
       "listID": 7
     },
     {
-      "taskTitle": "Call mom",
-      "dueDate": "25/05/2023",
-      "dueTime": "20:00",
-      "description": "Catch up on family news",
-      "important": false,
-      "completed": true,
-      "id": 7,
-      "listID": 5
-    },
-    {
-      "taskTitle": "Check-up",
-      "dueDate": "29/04/2055",
-      "dueTime": "09:00",
-      "description": "Go for reggular checkup",
-      "important": true,
-      "completed": true,
-      "listID": 7,
-      "id": 8
-    },
-    {
-      "taskTitle": "Check-up",
-      "dueDate": "29/04/2055",
-      "dueTime": "09:00",
-      "description": "Go for reggular checkup",
+      "taskTitle": "Fix kitchen sink",
+      "dueDate": "15/05/2023",
+      "dueTime": "10:00",
+      "description": "Leakage in the sink needs to be fixed",
       "important": true,
       "completed": false,
-      "listID": 7,
-      "id": 100
-    },
-    {
-      "taskTitle": "call brother",
-      "dueDate": "19/04/2023",
-      "dueTime": "12:45",
-      "description": "ask him somthing",
-      "important": false,
-      "completed": true,
-      "id": 12,
+      "id": 8,
       "listID": 5
     },
     {
-      "taskTitle": "hello0000000",
-      "dueDate": "19/04/2023",
-      "dueTime": "00:45",
+      "taskTitle": "Prepare for job interview",
+      "dueDate": "17/05/2023",
+      "dueTime": "13:00",
+      "description": "Research about the company and prepare for questions",
+      "important": true,
+      "completed": false,
+      "id": 9,
+      "listID": 2
+    },
+    {
+      "taskTitle": "Book movie tickets",
+      "dueDate": "18/05/2023",
+      "dueTime": "19:00",
+      "description": "New release movie at the nearby theater",
+      "important": false,
+      "completed": false,
+      "id": 10,
+      "listID": 3
+    },
+    {
+      "taskTitle": "Buy groceries",
+      "dueDate": "10/05/2023",
+      "dueTime": "10:00",
+      "description": "Buy milk, bread, and eggs",
+      "important": false,
+      "completed": false,
+      "id": 11,
+      "listID": 3
+    },
+    {
+      "taskTitle": "Attend meeting",
+      "dueDate": "12/05/2023",
+      "dueTime": "14:00",
+      "description": "Discuss project status with team",
+      "important": true,
+      "completed": false,
+      "id": 12,
+      "listID": 2
+    },
+    {
+      "taskTitle": "Read book",
+      "dueDate": "15/05/2023",
+      "dueTime": "20:00",
+      "description": "Read 'The Alchemist' by Paulo Coelho",
+      "important": false,
+      "completed": false,
+      "id": 13,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Go for a run",
+      "dueDate": "17/05/2023",
+      "dueTime": "07:00",
+      "description": "Go for a 30-minute run in the park",
+      "important": false,
+      "completed": false,
+      "id": 14,
+      "listID": 6
+    },
+    {
+      "taskTitle": "Call mom",
+      "dueDate": "19/05/2023",
+      "dueTime": "15:00",
+      "description": "Catch up with mom and dad",
+      "important": false,
+      "completed": false,
+      "id": 15,
+      "listID": 5
+    },
+    {
+      "taskTitle": "Study Spanish",
+      "dueDate": "22/05/2023",
+      "dueTime": "11:00",
+      "description": "Practice vocabulary and grammar",
+      "important": true,
+      "completed": false,
+      "id": 16,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Book flight",
+      "dueDate": "25/05/2023",
+      "dueTime": "17:00",
+      "description": "Book flight to New York for vacation",
+      "important": true,
+      "completed": false,
+      "id": 17,
+      "listID": 3
+    },
+    {
+      "taskTitle": "Write blog post",
+      "dueDate": "27/05/2023",
+      "dueTime": "09:00",
+      "description": "Write a blog post on the benefits of meditation",
+      "important": false,
+      "completed": false,
+      "id": 18,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Buy birthday gift",
+      "dueDate": "29/05/2023",
+      "dueTime": "12:00",
+      "description": "Buy a gift for John's birthday",
+      "important": false,
+      "completed": false,
+      "id": 19,
+      "listID": 5
+    },
+    {
+      "taskTitle": "Plan weekend getaway",
+      "dueDate": "31/05/2023",
+      "dueTime": "14:00",
+      "description": "Plan a weekend getaway with friends",
+      "important": true,
+      "completed": false,
+      "id": 20,
+      "listID": 3
+    },
+    {
+      "taskTitle": "Read book",
+      "dueDate": "10/06/2023",
+      "dueTime": "14:30",
+      "description": "Read 'The Alchemist' by Paulo Coelho",
+      "important": true,
+      "completed": false,
+      "id": 21,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Buy groceries",
+      "dueDate": "15/06/2023",
+      "dueTime": "10:00",
+      "description": "Buy milk, eggs, bread, and cheese",
+      "important": false,
+      "completed": false,
+      "id": 22,
+      "listID": 5
+    },
+    {
+      "taskTitle": "Plan vacation",
+      "dueDate": "20/06/2023",
+      "dueTime": "16:00",
+      "description": "Plan a trip to Hawaii for next month",
+      "important": true,
+      "completed": false,
+      "id": 23,
+      "listID": 3
+    },
+    {
+      "taskTitle": "Write blog post",
+      "dueDate": "25/06/2023",
+      "dueTime": "11:00",
+      "description": "Write a blog post about the benefits of meditation",
+      "important": false,
+      "completed": false,
+      "id": 24,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Practice guitar",
+      "dueDate": "30/06/2023",
+      "dueTime": "15:00",
+      "description": "Practice 'Stairway to Heaven' by Led Zeppelin",
+      "important": false,
+      "completed": false,
+      "id": 25,
+      "listID": 3
+    },
+    {
+      "taskTitle": "Call Mom",
+      "dueDate": "05/07/2023",
+      "dueTime": "12:30",
+      "description": "Call Mom to wish her a happy birthday",
+      "important": true,
+      "completed": false,
+      "id": 26,
+      "listID": 5
+    },
+    {
+      "taskTitle": "Finish presentation",
+      "dueDate": "10/07/2023",
+      "dueTime": "09:00",
+      "description": "Finish the presentation for the sales meeting next week",
+      "important": true,
+      "completed": false,
+      "id": 27,
+      "listID": 2
+    },
+    {
+      "taskTitle": "Go for a run",
+      "dueDate": "15/07/2023",
+      "dueTime": "07:00",
+      "description": "Go for a 5-mile run in the morning",
+      "important": false,
+      "completed": false,
+      "id": 28,
+      "listID": 6
+    },
+    {
+      "taskTitle": "Make dinner reservations",
+      "dueDate": "20/07/2023",
+      "dueTime": "18:00",
+      "description": "Make reservations at the new Italian restaurant downtown",
+      "important": false,
+      "completed": false,
+      "id": 29,
+      "listID": 5
+    },
+
+    {
+      "taskTitle": "Buy groceries",
+      "dueDate": "08/06/2023",
+      "dueTime": "15:30",
+      "description": "Milk, bread, eggs, cheese",
+      "important": false,
+      "completed": false,
+      "id": 30,
+      "listID": 2
+    },
+    {
+      "taskTitle": "Call Mom",
+      "dueDate": "10/06/2023",
+      "dueTime": "10:00",
+      "description": "Wish her Happy Birthday",
+      "important": true,
+      "completed": false,
+      "id": 31,
+      "listID": 5
+    },
+    {
+      "taskTitle": "Learn React",
+      "dueDate": "12/06/2023",
+      "dueTime": "14:00",
+      "description": "Complete React tutorial",
+      "important": true,
+      "completed": false,
+      "id": 32,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Go for a jog",
+      "dueDate": "15/06/2023",
+      "dueTime": "07:00",
+      "description": "Run 5 km",
+      "important": false,
+      "completed": false,
+      "id": 33,
+      "listID": 6
+    },
+    {
+      "taskTitle": "Finish book",
+      "dueDate": "17/06/2023",
+      "dueTime": "22:00",
+      "description": "Read final chapter",
+      "important": false,
+      "completed": false,
+      "id": 34,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Pay electricity bill",
+      "dueDate": "19/06/2023",
+      "dueTime": "16:00",
       "description": "",
       "important": false,
-      "listID": 7,
-      "id": 13
+      "completed": false,
+      "id": 35,
+      "listID": 3
     },
     {
-      "taskTitle": "start homework",
-      "dueDate": "20/04/2023",
-      "dueTime": "00:45",
+      "taskTitle": "Meet with manager",
+      "dueDate": "22/06/2023",
+      "dueTime": "11:00",
+      "description": "Discuss project status",
+      "important": true,
+      "completed": false,
+      "id": 36,
+      "listID": 2
+    },
+    {
+      "taskTitle": "Practice guitar",
+      "dueDate": "24/06/2023",
+      "dueTime": "18:00",
+      "description": "Learn new chords",
+      "important": false,
+      "completed": false,
+      "id": 37,
+      "listID": 4
+    },
+    {
+      "taskTitle": "Plan vacation",
+      "dueDate": "27/06/2023",
+      "dueTime": "12:00",
       "description": "",
-      "completed": true,
-      "important": true,
-      "listID": 4,
-      "id": 14
+      "important": false,
+      "completed": false,
+      "id": 38,
+      "listID": 5
     },
     {
-      "taskTitle": "test now",
-      "dueDate": "18/05/2025",
-      "dueTime": "13:45",
-      "description": "hello max\n",
-      "important": true,
-      "listID": 2,
-      "id": 15
+      "taskTitle": "Do laundry",
+      "dueDate": "29/06/2023",
+      "dueTime": "19:00",
+      "description": "",
+      "important": false,
+      "completed": false,
+      "id": 39,
+      "listID": 3
     }
   ],
   "listNames": [
